@@ -1,5 +1,5 @@
 *.class
 *.jar
 *.iml
+.idea
 out
-.idea/workspace.xml
