@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.model.User" table="users" catalog="hotel_db">
+        <id name="ID" type="java.lang.String" length="11" >
+            <generator class="assigned"/>
+        </id>
+        <property name="nickname" type="java.lang.String" length="25"/>
+        <property name="name" type="java.lang.String" length="10"/>
+        <property name="password" type="java.lang.String" length="25"/>
+        <property name="IDCard" type="java.lang.String" length="20"/>
+        <property name="register" type="java.lang.Short">
+            <column name="register" default="0"/>
+        </property>
+    </class>
+</hibernate-mapping>
