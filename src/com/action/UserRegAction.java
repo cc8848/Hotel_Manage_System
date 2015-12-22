@@ -3,6 +3,8 @@ package com.action;
 import com.model.User;
 import com.service.UserRegService;
 
+import java.util.Date;
+
 /**
  * Created by stiles on 15/12/19.
  */
@@ -14,10 +16,6 @@ public class UserRegAction {
         this.userRegService = userRegService;
     }
 
-    public User getUser() {
-        return user;
-    }
-
     public void setUser(User user) {
         this.user = user;
     }
@@ -26,11 +24,9 @@ public class UserRegAction {
         return "success";
     }
 
-    public String register(User user) {
-        if (userRegService.register(user)) {
+    public String register() {
+        if (userRegService.register(user))
             return "success";
-        } else {
-            return "failed";
-        }
+        return "error";
     }
 }
