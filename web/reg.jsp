@@ -12,12 +12,13 @@
     <title>游客注册</title>
 </head>
 <body>
+<s:fielderror cssStyle="color:red"/>
 <form action="userReg" method="post">
-    <s:textfield name="user.phone" label="手机号"/> <br>
-    <s:password name="user.password" label="密码"/> <br>
-    <s:textfield name="user.nickname" label="昵称"/> <br>
-    <s:textfield name="user.name" label="真实姓名"/> <br>
-    <s:textfield name="user.IDCard" label="身份证号"/> <br>
+    手机号:<input type="text" name="user.phone" /> <br>
+    密码:<input type="password" name="user.password" /> <br>
+    昵称:<input type="text" name="user.nickname"/> <br>
+    真实姓名<input type="text" name="user.name"/> <br>
+    身份证号<input type="text" name="user.IDCard"/> <br>
     <s:submit align="left"/>
 </form>
 </body>

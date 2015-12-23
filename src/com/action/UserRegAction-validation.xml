@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+        "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+        "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+    <field name="user.phone">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>手机号不能为空</message>
+        </field-validator>
+
+        <field-validator type="regex">
+            <param name="expression"><![CDATA[^1[0-9]{10}]]></param>
+            <message>手机号格式错误</message>
+        </field-validator>
+
+    </field>
+    
+    <field name="user.password">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>密码不能为空</message>
+        </field-validator>
+        <field-validator type="regex">
+            <param name="expression"><![CDATA[\W{6,25}]]></param>
+            <message>密码必须只包含字母,数字,下划线且长度位6到25位</message>
+        </field-validator>
+    </field>
+
+    <field name="user.name">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>姓名不能为空</message>
+        </field-validator>
+    </field>
+    
+    <field name="user.IDCard">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>身份证号不能为空</message>
+        </field-validator>
+        <field-validator type="regex">
+            <param name="expression"><![CDATA[(^\d{15}$)|(^\d{17}([0-9]|X)$)]]></param>
+            <message>身份证格式错误</message>
+        </field-validator>
+    </field>
+</validators>

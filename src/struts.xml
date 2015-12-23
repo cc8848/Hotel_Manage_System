@@ -6,13 +6,10 @@
 
 <struts>
     <package name="strutsBean" extends="struts-default" namespace="/">
-        <action name="userRegView" class="userRegAction" method="regView">
-            <result name="success">reg.jsp</result>
-        </action>
-
         <action name="userReg" class="userRegAction" method="register">
             <result name="success">index.jsp</result>
             <result name="error">error.jsp</result>
+            <result name="input">reg.jsp</result>
         </action>
     </package>
 </struts>

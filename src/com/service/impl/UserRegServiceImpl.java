@@ -19,6 +19,9 @@ public class UserRegServiceImpl implements UserRegService {
 
     @Override
     public boolean register(User user) {    //注册接口实现
+        if (user.getNickname() == null) {//如果昵称没有填,那么昵称就设置为手机号
+            user.setNickname(user.getPhone());
+        }
         user.setRegister(true);
         if(userDAO.save(user)) {
             return true;

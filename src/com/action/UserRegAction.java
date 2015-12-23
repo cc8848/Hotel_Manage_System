@@ -1,6 +1,7 @@
 package com.action;
 
 import com.model.User;
+import com.opensymphony.xwork2.ActionSupport;
 import com.service.UserRegService;
 
 import java.util.Date;
@@ -8,19 +9,9 @@ import java.util.Date;
 /**
  * Created by stiles on 15/12/19.
  */
-public class UserRegAction {
+public class UserRegAction extends ActionSupport {
     private User user;
     private UserRegService userRegService;
-    private String password;
-    private String phone;
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
     public void setUserRegService(UserRegService userRegService) {
         this.userRegService = userRegService;
@@ -34,14 +25,7 @@ public class UserRegAction {
         return user;
     }
 
-    public String regView(){
-        return "success";
-    }
-
     public String register() {
-        //System.out.println(user.getPhone());
-        //System.out.println(user.getPassword());
-        //user.setRegister(true);
         if (userRegService.register(user))
             return "success";
         return "error";
