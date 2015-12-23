@@ -4,24 +4,32 @@ package com.model;
  * Created by stiles on 15/12/16.
  */
 public class User implements java.io.Serializable {
-    private String ID;//11位手机号
+    private String phone;//11位手机号
     private String nickname;//昵称
     private String name;//姓名
     private String password;//密码(可能没有)
     private String IDCard;//身份证号
-    private Short register;//是否注册
+    private boolean register;//是否注册
 
     public User() {}
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
 
     public String getNickname() {
         return nickname;
     }
 
-    public Short getRegister() {
+    public boolean getRegister() {
         return register;
     }
 
-    public void setRegister(Short register) {
+    public void setRegister(boolean register) {
         this.register = register;
     }
 
@@ -35,14 +43,6 @@ public class User implements java.io.Serializable {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getID() {
-        return ID;
-    }
-
-    public void setID(String ID) {
-        this.ID = ID;
     }
 
     public String getName() {

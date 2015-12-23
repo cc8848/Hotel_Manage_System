@@ -4,15 +4,15 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="com.model.User" table="users" catalog="hoteldb">
-        <id name="ID" type="java.lang.String" length="11" >
+        <id name="phone" type="java.lang.String" length="11" >
             <generator class="assigned"/>
         </id>
         <property name="nickname" type="java.lang.String" length="25"/>
         <property name="name" type="java.lang.String" length="10"/>
         <property name="password" type="java.lang.String" length="25"/>
         <property name="IDCard" type="java.lang.String" length="20"/>
-        <property name="register" type="java.lang.Short">
-            <column name="register" default="0"/>
+        <property name="register" type="java.lang.Boolean">
+            <column name="register" default="false"/>
         </property>
     </class>
 </hibernate-mapping>

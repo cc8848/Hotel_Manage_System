@@ -19,6 +19,7 @@ public class UserRegServiceImpl implements UserRegService {
 
     @Override
     public boolean register(User user) {    //注册接口实现
+        user.setRegister(true);
         if(userDAO.save(user)) {
             return true;
         }
