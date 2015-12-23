@@ -13,7 +13,17 @@ import org.hibernate.Transaction;
 public class UserDAOImpl extends BaseDAO implements UserDAO {
     @Override
     public boolean delete(String ID) {  //接口方法实现:删除某用户
-
+        try {
+            Session session = getSession();
+            Transaction ts = session.beginTransaction();
+            Query query = session.createQuery("delete from User where phone='" + ID + "'");
+            query.executeUpdate();
+            ts.commit();
+            session.close();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return false;
     }
 
@@ -57,6 +67,7 @@ public class UserDAOImpl extends BaseDAO implements UserDAO {
             User user = (User)query.uniqueResult();
             ts.commit();
             session.clear();
+            session.close();
             return  user;
         } catch (Exception e) {
             e.printStackTrace();
