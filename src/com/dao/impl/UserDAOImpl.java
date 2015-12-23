@@ -52,7 +52,7 @@ public class UserDAOImpl extends BaseDAO implements UserDAO {
         try {
             Session session = getSession();
             Transaction ts = session.beginTransaction();
-            Query query = session.createQuery("from User where ID='" + ID +"'");
+            Query query = session.createQuery("from User where phone='" + ID +"'");
             query.setMaxResults(1);
             User user = (User)query.uniqueResult();
             ts.commit();

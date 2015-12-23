@@ -22,7 +22,7 @@
             <message>密码不能为空</message>
         </field-validator>
         <field-validator type="regex">
-            <param name="expression"><![CDATA[\W{6,25}]]></param>
+            <param name="expression"><![CDATA[[A-Za-z0-9_]{6,25}]]></param>
             <message>密码必须只包含字母,数字,下划线且长度位6到25位</message>
         </field-validator>
     </field>

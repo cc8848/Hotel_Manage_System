@@ -30,4 +30,11 @@ public class UserRegAction extends ActionSupport {
             return "success";
         return "error";
     }
+    public void validate() {
+        User tUser = userRegService.findOne(user.getPhone());
+        if (tUser != null) {
+            if (tUser.getRegister())
+                addFieldError("user.phone", "该手机号已经被注册");
+        }
+    }
 }

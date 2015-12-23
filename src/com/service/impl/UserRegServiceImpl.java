@@ -23,9 +23,18 @@ public class UserRegServiceImpl implements UserRegService {
             user.setNickname(user.getPhone());
         }
         user.setRegister(true);
-        if(userDAO.save(user)) {
+        if (userDAO.findOne(user.getPhone()) != null) {//如果用户存在但是没有注册,那么更新信息
+            if (userDAO.update(user))
+                return true;
+        }
+        else if(userDAO.save(user)) {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public User findOne(String phone) {
+        return userDAO.findOne(phone);
     }
 }

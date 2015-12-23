@@ -7,4 +7,5 @@ import com.model.User;
  */
 public interface UserRegService {
     boolean register(User user);//注册接口
+    User findOne(String phone);//根据手机号查找用户
 }
