@@ -17,8 +17,8 @@
     手机号:<input type="text" name="user.phone" /> <br>
     密码:<input type="password" name="user.password" /> <br>
     昵称:<input type="text" name="user.nickname"/> <br>
-    真实姓名<input type="text" name="user.name"/> <br>
-    身份证号<input type="text" name="user.IDCard"/> <br>
+    真实姓名:<input type="text" name="user.name"/> <br>
+    身份证号:<input type="text" name="user.IDCard"/> <br>
     <s:submit align="left"/>
 </form>
 </body>

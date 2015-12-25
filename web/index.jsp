@@ -8,11 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="/struts-tags" prefix="s"%>
 <html>
-  <head>
-    <title>HomePage</title>
-  </head>
-  <body>
+    <head>
+        <title>HomePage</title>
+    </head>
+    <body>
     <h1>Welcome!</h1>
-
-  </body>
+    <s:set name="user" value="#session['user']"/>
+    手机: <s:property value="#user.phone"/>
+    昵称: <s:property value="#user.nickname"/>
+    姓名: <s:property value="#user.name"/>
+    </body>
 </html>
