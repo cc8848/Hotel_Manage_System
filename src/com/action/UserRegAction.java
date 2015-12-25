@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * Created by stiles on 15/12/19.
  */
-public class UserAction extends ActionSupport {
+public class UserRegAction extends ActionSupport {
     private User user;
     private UserService userService;
 
