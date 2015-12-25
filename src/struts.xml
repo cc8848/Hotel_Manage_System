@@ -11,5 +11,10 @@
             <result name="error">error.jsp</result>
             <result name="input">reg.jsp</result>
         </action>
+
+        <action name="userLog" class="userLogAction" method="login">
+            <result name="success">welcome.jsp</result>
+            <result name="input">login.jsp</result>
+        </action>
     </package>
 </struts>

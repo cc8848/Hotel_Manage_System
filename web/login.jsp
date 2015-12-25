@@ -13,7 +13,7 @@
 </head>
 <body>
 <s:fielderror cssStyle="color:red"/>
-<form action="userReg.action" method="post">
+<form action="userLog.action" method="post">
     <table border="1">
         <tr>
             <td>手机号:</td>
