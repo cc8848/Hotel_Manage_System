@@ -36,7 +36,10 @@
             <td>身份证号:</td>
             <td><input type="text" name="user.IDCard"/></td>
         </tr>
-    <s:submit align="left"/>
+        <tr>
+            <s:submit align="center" value="注册"/>
+            <s:reset align="center" value="重置"/>
+        </tr>
     </table>
 </form>
 </body>

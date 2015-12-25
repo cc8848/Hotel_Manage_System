@@ -23,6 +23,7 @@
             <td>密码:</td>
             <td><input name="password" type="text"/></td>
         </tr>
+        <tr><s:submit align="center" value="登陆"/> </tr>
     </table>
 </form>
 </body>

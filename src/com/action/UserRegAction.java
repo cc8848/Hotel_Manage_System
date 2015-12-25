@@ -27,7 +27,7 @@ public class UserRegAction extends ActionSupport {
     }
 
     public String register() {
-        System.out.println(user);
+        //System.out.println(user);
         Map session = ActionContext.getContext().getSession();
         if (userService.register(user)) {
             session.put("user", user);

@@ -5,11 +5,13 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+    <constant name="struts.objectFactory" value="spring"/>
+    
     <package name="strutsBean" extends="struts-default" namespace="/">
         <action name="userReg" class="userRegAction" method="register">
             <result name="success">welcome.jsp</result>
             <result name="error">error.jsp</result>
-            <result name="input">reg.jsp</result>
+            <result name="input">register.jsp</result>
         </action>
 
         <action name="userLog" class="userLogAction" method="login">

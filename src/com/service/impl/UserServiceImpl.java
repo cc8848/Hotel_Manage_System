@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
     public User login(String phone, String password) {
         User user = userDAO.findOne(phone);
         if (user == null) return null;
-        if (user.getPassword() == password) {
+        if (user.getPassword().equals(password)) {
             return user;
         } else {
             return null;
