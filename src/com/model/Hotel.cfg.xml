@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.model.Hotel" table="hotels" catalog="hoteldb">
+        <id name="id" type="java.lang.String" length="32">
+            <generator class="uuid"/>
+        </id>
+        <property name="hotelName" type="java.lang.String" length="50" not-null="true"/>
+        <property name="address" type="java.lang.String" length="255" not-null="true"/>
+        <property name="star" type="java.lang.Integer"/>
+        <property name="telephone" type="java.lang.String" length="20" not-null="true"/>
+    </class>
+</hibernate-mapping>

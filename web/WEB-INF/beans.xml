@@ -23,6 +23,7 @@
         <property name="mappingResources">
             <list>
                 <value>com/model/User.cfg.xml</value>
+                <value>com/model/Hotel.cfg.xml</value>
             </list>
         </property>
     </bean>
@@ -37,12 +38,12 @@
     <bean id="userDAO" class="com.dao.impl.UserDAOImpl" parent="baseDAO"/>
 
     <!-- 业务逻辑依赖注入 -->
-    <bean id="userRegService" class="com.service.impl.UserRegServiceImpl">
+    <bean id="userService" class="com.service.impl.UserServiceImpl">
         <property name="userDAO" ref="userDAO"/>
     </bean>
 
     <!-- Action依赖注入 -->
-    <bean id="userRegAction" class="com.action.UserRegAction">
-        <property name="userRegService" ref="userRegService"/>
+    <bean id="userAction" class="com.action.UserAction">
+        <property name="userService" ref="userService"/>
     </bean>
 </beans>
