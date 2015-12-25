@@ -46,4 +46,7 @@
     <bean id="userRegAction" class="com.action.UserRegAction">
         <property name="userService" ref="userService"/>
     </bean>
+    <bean id="userLogAction" class="com.action.UserLogAction">
+        <property name="userService" ref="userService"/>
+    </bean>
 </beans>

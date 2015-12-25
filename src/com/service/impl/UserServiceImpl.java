@@ -37,4 +37,15 @@ public class UserServiceImpl implements UserService {
     public User findOne(String phone) {
         return userDAO.findOne(phone);
     }
+
+    @Override
+    public User login(String phone, String password) {
+        User user = userDAO.findOne(phone);
+        if (user == null) return null;
+        if (user.getPassword() == password) {
+            return user;
+        } else {
+            return null;
+        }
+    }
 }

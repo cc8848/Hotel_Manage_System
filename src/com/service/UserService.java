@@ -8,4 +8,5 @@ import com.model.User;
 public interface UserService {
     boolean register(User user);//注册接口
     User findOne(String phone);//根据手机号查找用户
+    User login(String phone, String password);//登陆接口
 }

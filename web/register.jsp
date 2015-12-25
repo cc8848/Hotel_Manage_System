@@ -14,12 +14,30 @@
 <body>
 <s:fielderror cssStyle="color:red"/>
 <form action="userReg.action" method="post">
-    手机号:<input type="text" name="user.phone" /> <br>
-    密码:<input type="password" name="user.password" /> <br>
-    昵称:<input type="text" name="user.nickname"/> <br>
-    真实姓名:<input type="text" name="user.name"/> <br>
-    身份证号:<input type="text" name="user.IDCard"/> <br>
+    <table border="1">
+        <tr>
+            <td>手机号:</td>
+            <td><input type="text" name="user.phone" /></td>
+        </tr>
+
+        <tr>
+            <td>密码:</td>
+            <td><input type="password" name="user.password" /></td>
+        </tr>
+        <tr>
+            <td>昵称:</td>
+            <td><input type="text" name="user.nickname"/></td>
+        </tr>
+        <tr>
+            <td>真实姓名:</td>
+            <td><input type="text" name="user.name"/></td>
+        </tr>
+        <tr>
+            <td>身份证号:</td>
+            <td><input type="text" name="user.IDCard"/></td>
+        </tr>
     <s:submit align="left"/>
+    </table>
 </form>
 </body>
 </html>
