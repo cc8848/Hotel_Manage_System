@@ -9,14 +9,14 @@
     
     <package name="strutsBean" extends="struts-default" namespace="/">
         <action name="userReg" class="userRegAction" method="register">
-            <result name="success">welcome.jsp</result>
+            <result name="success">userPage/welcome.jsp</result>
             <result name="error">error.jsp</result>
-            <result name="input">register.jsp</result>
+            <result name="input">userPage/register.jsp</result>
         </action>
 
         <action name="userLog" class="userLogAction" method="login">
-            <result name="success">welcome.jsp</result>
-            <result name="input">login.jsp</result>
+            <result name="success">userPage/welcome.jsp</result>
+            <result name="input">userPage/login.jsp</result>
         </action>
     </package>
 </struts>

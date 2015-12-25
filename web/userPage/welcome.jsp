@@ -9,7 +9,7 @@
 <%@taglib uri="/struts-tags" prefix="s"%>
 <html>
     <head>
-        <title>HomePage</title>
+        <title>欢迎</title>
     </head>
     <body>
     <h1>Welcome!</h1>
