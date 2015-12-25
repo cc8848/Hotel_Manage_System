@@ -6,8 +6,8 @@
 
 <struts>
     <package name="strutsBean" extends="struts-default" namespace="/">
-        <action name="userReg" class="userRegAction" method="register">
-            <result name="success">index.jsp</result>
+        <action name="userReg" class="userAction" method="register">
+            <result name="success">welcome.jsp</result>
             <result name="error">error.jsp</result>
             <result name="input">reg.jsp</result>
         </action>

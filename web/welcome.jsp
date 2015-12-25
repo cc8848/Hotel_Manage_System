@@ -14,8 +14,8 @@
     <body>
     <h1>Welcome!</h1>
     <s:set name="user" value="#session['user']"/>
-    手机: <s:property value="#user.phone"/>
-    昵称: <s:property value="#user.nickname"/>
-    姓名: <s:property value="#user.name"/>
+    手机: <s:property value="#user.phone"/> <br>
+    昵称: <s:property value="#user.nickname"/> <br>
+    姓名: <s:property value="#user.name"/> <br>
     </body>
 </html>

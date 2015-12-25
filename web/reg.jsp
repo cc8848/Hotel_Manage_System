@@ -13,7 +13,7 @@
 </head>
 <body>
 <s:fielderror cssStyle="color:red"/>
-<form action="userReg" method="post">
+<form action="userReg.action" method="post">
     手机号:<input type="text" name="user.phone" /> <br>
     密码:<input type="password" name="user.password" /> <br>
     昵称:<input type="text" name="user.nickname"/> <br>
