@@ -1,10 +1,12 @@
 package com.action;
 
 import com.model.User;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.service.UserRegService;
 
 import java.util.Date;
+import java.util.Map;
 
 /**
  * Created by stiles on 15/12/19.
@@ -26,8 +28,12 @@ public class UserRegAction extends ActionSupport {
     }
 
     public String register() {
-        if (userRegService.register(user))
+        System.out.println(user);
+        Map session = ActionContext.getContext().getSession();
+        if (userRegService.register(user)) {
+            session.put("user", user);
             return "success";
+        }
         return "error";
     }
     public void validate() {
