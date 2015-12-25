@@ -43,10 +43,11 @@
     </bean>
 
     <!-- Action依赖注入 -->
-    <bean id="userRegAction" class="com.action.UserRegAction" scope="prototype">
+    <bean id="userRegAction" class="com.action.user.UserRegAction" scope="prototype">
         <property name="userService" ref="userService"/>
     </bean>
-    <bean id="userLogAction" class="com.action.UserLogAction" scope="prototype">
+    <bean id="userLogAction" class="com.action.user.UserLogAction" scope="prototype">
         <property name="userService" ref="userService"/>
     </bean>
+    <bean id="managerLogAction" class="com.action.manage.ManagerLogAction" scope="prototype"/>
 </beans>

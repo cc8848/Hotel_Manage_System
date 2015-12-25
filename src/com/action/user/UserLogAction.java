@@ -1,4 +1,4 @@
-package com.action;
+package com.action.user;
 
 import com.model.User;
 import com.opensymphony.xwork2.ActionContext;

@@ -8,6 +8,7 @@
     <constant name="struts.objectFactory" value="spring"/>
     
     <package name="strutsBean" extends="struts-default" namespace="/">
+        <!--用户相关-->
         <action name="userReg" class="userRegAction" method="register">
             <result name="success">userPage/welcome.jsp</result>
             <result name="error">error.jsp</result>
@@ -18,5 +19,15 @@
             <result name="success">userPage/welcome.jsp</result>
             <result name="input">userPage/login.jsp</result>
         </action>
+
+        <!--旅店相关-->
+
+
+        <!--管理员相关-->
+        <action name="managerLog" class="managerLogAction" method="login">
+            <result name="success">/#</result>
+            <result name="input">managerPage/manageLogin.jsp</result>
+        </action>
+
     </package>
 </struts>
