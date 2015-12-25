@@ -3,20 +3,19 @@ package com.action;
 import com.model.User;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
-import com.service.UserRegService;
+import com.service.UserService;
 
-import java.util.Date;
 import java.util.Map;
 
 /**
  * Created by stiles on 15/12/19.
  */
-public class UserRegAction extends ActionSupport {
+public class UserAction extends ActionSupport {
     private User user;
-    private UserRegService userRegService;
+    private UserService userService;
 
-    public void setUserRegService(UserRegService userRegService) {
-        this.userRegService = userRegService;
+    public void setUserService(UserService userService) {
+        this.userService = userService;
     }
 
     public void setUser(User user) {
@@ -30,14 +29,14 @@ public class UserRegAction extends ActionSupport {
     public String register() {
         System.out.println(user);
         Map session = ActionContext.getContext().getSession();
-        if (userRegService.register(user)) {
+        if (userService.register(user)) {
             session.put("user", user);
             return "success";
         }
         return "error";
     }
     public void validate() {
-        User tUser = userRegService.findOne(user.getPhone());
+        User tUser = userService.findOne(user.getPhone());
         if (tUser != null) {
             if (tUser.getRegister())
                 addFieldError("user.phone", "该手机号已经被注册");

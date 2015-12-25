@@ -2,15 +2,15 @@ package com.service.impl;
 
 import com.dao.UserDAO;
 import com.model.User;
-import com.service.UserRegService;
+import com.service.UserService;
 
 /**
  * Created by stiles on 15/12/19.
  */
-public class UserRegServiceImpl implements UserRegService {
+public class UserServiceImpl implements UserService {
     private UserDAO userDAO;
-    UserRegServiceImpl(){
-        System.out.println("UserRegServiceImpl is created.");
+    UserServiceImpl(){
+        System.out.println("UserServiceImpl is created.");
     }
 
     public void setUserDAO(UserDAO userDAO) {
