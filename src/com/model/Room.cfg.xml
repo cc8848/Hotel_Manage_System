@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.model.Room" table="rooms" catalog="hoteldb">
+        <id name="id" type="java.lang.String" length="32">
+            <generator class="uuid"/>
+        </id>
+
+        <many-to-one name="hotel" column="hotel_id" class="com.model.Hotel" cascade="all"/>
+
+        <property name="pricePerNight" type="java.lang.Double"/>
+        <property name="type" type="java.lang.Integer"/>
+        <property name="remainder" type="java.lang.Integer"/>
+    </class>
+</hibernate-mapping>

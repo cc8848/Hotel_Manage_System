@@ -7,26 +7,38 @@
 <struts>
     <constant name="struts.objectFactory" value="spring"/>
     
-    <package name="strutsBean" extends="struts-default" namespace="/">
+    <package name="strutsBeanUser" extends="struts-default" namespace="/userPage">
         <!--用户相关-->
         <action name="userReg" class="userRegAction" method="register">
-            <result name="success">userPage/welcome.jsp</result>
+            <result name="success">/userPage/welcome.jsp</result>
             <result name="error">error.jsp</result>
-            <result name="input">userPage/register.jsp</result>
+            <result name="input">/userPage/register.jsp</result>
         </action>
 
         <action name="userLog" class="userLogAction" method="login">
-            <result name="success">userPage/welcome.jsp</result>
-            <result name="input">userPage/login.jsp</result>
+            <result name="success">/userPage/welcome.jsp</result>
+            <result name="input">/userPage/login.jsp</result>
+        </action>
+    </package>
+        <!--旅店相关-->
+    <package name="strutsBeanHotel" extends="struts-default" namespace="/hotelPage">
+        <action name="hotelReg" class="hotelRegAction" method="register">
+            <result name="success">/hotelPage/welcome.jsp</result>
+            <result name="error">/#</result>
+            <result name="input">/hotelPage/register.jsp</result>
         </action>
 
-        <!--旅店相关-->
-
+        <action name="hotelLog" class="hotelLogAction" method="login">
+            <result name="success">/hotelPage/welcome.jsp</result>
+            <result name="input">/hotelPage/login.jsp</result>
+        </action>
+    </package>
 
         <!--管理员相关-->
+    <package name="strutsBeanManager" extends="struts-default" namespace="/managerPage">
         <action name="managerLog" class="managerLogAction" method="login">
-            <result name="success">/#</result>
-            <result name="input">managerPage/manageLogin.jsp</result>
+            <result name="success">/index.jsp</result>
+            <result name="input">/managerPage/manageLogin.jsp</result>
         </action>
 
     </package>

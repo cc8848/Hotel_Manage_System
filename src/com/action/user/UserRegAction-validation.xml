@@ -6,7 +6,7 @@
     <field name="user.phone">
         <field-validator type="requiredstring">
             <param name="trim">true</param>
-            <message>手机号不能为空</message>
+            <message>手机号不能空</message>
         </field-validator>
 
         <field-validator type="regex">

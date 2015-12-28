@@ -1,26 +1,26 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: stiles
-  Date: 15/12/25
-  Time: 下午5:07
+  Date: 15/12/27
+  Time: 下午7:44
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
-    <title>管理员登陆</title>
+    <title>旅店登陆</title>
 </head>
 <body>
 <s:fielderror cssStyle="color:red"/>
-<form action="managerLog.action" method="post">
+<form action="hotelLog.action" method="post">
     <table border="1">
         <tr>
-            <td>账号:</td>
-            <td><input name="username" type="text"/></td>
+            <td>旅店名称:</td>
+            <td><input name="name" type="text"/></td>
         </tr>
         <tr>
-            <td>密码:</td>
+            <td>旅店密码:</td>
             <td><input name="password" type="password"/></td>
         </tr>
         <tr><s:submit align="center" value="登陆"/> </tr>

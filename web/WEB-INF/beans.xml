@@ -36,10 +36,14 @@
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
     <bean id="userDAO" class="com.dao.impl.UserDAOImpl" parent="baseDAO"/>
+    <bean id="hotelDAO" class="com.dao.impl.HotelDaoImpl" parent="baseDAO"/>
 
     <!-- 业务逻辑依赖注入 -->
     <bean id="userService" class="com.service.impl.UserServiceImpl">
         <property name="userDAO" ref="userDAO"/>
+    </bean>
+    <bean id="hotelService" class="com.service.impl.HotelServiceImpl">
+        <property name="hotelDAO" ref="hotelDAO"/>
     </bean>
 
     <!-- Action依赖注入 -->
@@ -49,5 +53,15 @@
     <bean id="userLogAction" class="com.action.user.UserLogAction" scope="prototype">
         <property name="userService" ref="userService"/>
     </bean>
+
+
     <bean id="managerLogAction" class="com.action.manage.ManagerLogAction" scope="prototype"/>
+
+
+    <bean id="hotelRegAction" class="com.action.hotel.HotelRegisterAction" scope="prototype">
+        <property name="hotelService" ref="hotelService"/>
+    </bean>
+    <bean id="hotelLogAction" class="com.action.hotel.HotelLoginAction" scope="prototype">
+        <property name="hotelService" ref="hotelService"/>
+    </bean>
 </beans>

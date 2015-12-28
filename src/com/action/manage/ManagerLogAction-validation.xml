@@ -7,7 +7,7 @@
     <field name="username">
         <field-validator type="requiredstring">
             <param name="trim">true</param>
-            <message>手机号不能为空</message>
+            <message>账号不能为空</message>
         </field-validator>
     </field>
 
