@@ -1,7 +1,9 @@
 package com.action.manage;
 
+import com.model.Admin;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
+import com.service.AdminService;
 
 import java.util.Map;
 
@@ -9,6 +11,12 @@ import java.util.Map;
  * Created by stiles on 15/12/25.
  */
 public class ManagerLogAction extends ActionSupport {
+    AdminService adminService;
+
+    public void setAdminService(AdminService adminService) {
+        this.adminService = adminService;
+    }
+
     String username;
     String password;
 
@@ -30,12 +38,17 @@ public class ManagerLogAction extends ActionSupport {
 
     public String login() {
         Map session = ActionContext.getContext().getSession();
-        if (!"admin".equals(username) || !"admin".equals(password)) {
+        Admin admin = adminService.find(username);
+        if(admin == null){
             addFieldError("password", "密码错误");
-        }
-        if(hasFieldErrors())
             return "input";
-        session.put("admin", "admin");
+        }
+        if (!admin.getUsername().equals(username) || !admin.getPassword().equals(password)) {
+            addFieldError("password", "密码错误");
+            return "input";
+        }
+
+        session.put("admin", admin);
         return "success";
     }
 }

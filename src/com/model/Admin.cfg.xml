@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.model.Admin" table="admins" catalog="hoteldb">
+        <id name="username" type="java.lang.String" length="32">
+            <generator class="assigned"/>
+        </id>
+        <property name="password" type="java.lang.String" length="32" not-null="true"/>
+    </class>
+</hibernate-mapping>

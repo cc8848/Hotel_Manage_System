@@ -37,7 +37,7 @@
         <!--管理员相关-->
     <package name="strutsBeanManager" extends="struts-default" namespace="/managerPage">
         <action name="managerLog" class="managerLogAction" method="login">
-            <result name="success">/index.jsp</result>
+            <result name="success">/managerPage/welcome.jsp</result>
             <result name="input">/managerPage/manageLogin.jsp</result>
         </action>
 
