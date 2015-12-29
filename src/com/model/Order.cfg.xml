@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.model.Order" table="orders" catalog="hoteldb">
+        <id name="id" type="java.lang.String" length="32">
+            <generator class="uuid"/>
+        </id>
+        <many-to-one name="room" column="room_id" class="com.model.Room" cascade="all"/>
+        <many-to-one name="user" column="user_id" class="com.model.User" cascade="all"/>
+
+        <property name="start" type="java.util.Date"/>
+        <property name="end" type="java.util.Date"/>
+        <property name="ifValid" type="java.lang.Boolean"/>
+    </class>
+</hibernate-mapping>

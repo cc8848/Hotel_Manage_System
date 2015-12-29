@@ -26,6 +26,7 @@
                 <value>com/model/Hotel.cfg.xml</value>
                 <value>com/model/Admin.cfg.xml</value>
                 <value>com/model/Room.cfg.xml</value>
+                <value>com/model/Order.cfg.xml</value>
             </list>
         </property>
     </bean>
@@ -40,6 +41,7 @@
     <bean id="userDAO" class="com.dao.impl.UserDAOImpl" parent="baseDAO"/>
     <bean id="hotelDAO" class="com.dao.impl.HotelDaoImpl" parent="baseDAO"/>
     <bean id="adminDAO" class="com.dao.impl.AdminDAOImpl" parent="baseDAO"/>
+    <bean id="roomDAO" class="com.dao.impl.RoomDAOImpl" parent="baseDAO"/>
 
     <!-- 业务逻辑依赖注入 -->
     <bean id="userService" class="com.service.impl.UserServiceImpl">
@@ -50,6 +52,9 @@
     </bean>
     <bean id="adminService" class="com.service.impl.AdminServiceImpl">
         <property name="adminDAO" ref="adminDAO"/>
+    </bean>
+    <bean id="roomService" class="com.service.impl.RoomServiceImpl">
+        <property name="roomDAO" ref="roomDAO"/>
     </bean>
 
     <!-- Action依赖注入 -->
@@ -71,5 +76,8 @@
     </bean>
     <bean id="hotelLogAction" class="com.action.hotel.HotelLoginAction" scope="prototype">
         <property name="hotelService" ref="hotelService"/>
+    </bean>
+    <bean id="addRoomsAction" class="com.action.hotel.AddRoomsAction" scope="prototype">
+        <property name="roomService" ref="roomService"/>
     </bean>
 </beans>

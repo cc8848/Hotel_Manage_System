@@ -12,6 +12,5 @@
 
         <property name="pricePerNight" type="java.lang.Double"/>
         <property name="type" type="java.lang.Integer"/>
-        <property name="remainder" type="java.lang.Integer"/>
     </class>
 </hibernate-mapping>

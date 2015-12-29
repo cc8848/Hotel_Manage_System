@@ -32,6 +32,10 @@
             <result name="success">/hotelPage/welcome.jsp</result>
             <result name="input">/hotelPage/login.jsp</result>
         </action>
+
+        <action name="addRooms" class="addRoomsAction" method="addRooms">
+            <result name="success">/hotelPage/addRoomsSuccess.jsp</result>
+        </action>
     </package>
 
         <!--管理员相关-->

@@ -7,12 +7,7 @@ public class Room {
     private String id;
     private double pricePerNight;
     private Hotel hotel;
-    private int remainder;
     private int type;//1,2,3分别代表小中大
-
-    public void setRemainder(int remainder) {
-        this.remainder = remainder;
-    }
 
     public int getType() {
         return type;
@@ -20,10 +15,6 @@ public class Room {
 
     public void setType(int type) {
         this.type = type;
-    }
-
-    public int getRemainder() {
-        return remainder;
     }
 
     public String getId() {

@@ -11,5 +11,6 @@
     旅店地址:<s:property value="#hotel.address"/> <br>
     旅店星级:<s:property value="#hotel.star"/> <br>
     旅店电话:<s:property value="#hotel.telephone"/> <br>
+    <h2><a href="addRooms.jsp">添加房间</a></h2>
 </body>
 </html>
