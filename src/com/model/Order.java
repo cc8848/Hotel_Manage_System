@@ -10,10 +10,14 @@ public class Order {
     private Room room;
     private User user;
 
-    Date start;
-    Date end;
+    long start;
+    long end;
 
     boolean ifValid;
+
+    public Order() {
+        this.ifValid = true;
+    }
 
     public boolean isIfValid() {
         return ifValid;
@@ -47,19 +51,19 @@ public class Order {
         this.user = user;
     }
 
-    public Date getStart() {
+    public long getStart() {
         return start;
     }
 
-    public void setStart(Date start) {
+    public void setStart(long start) {
         this.start = start;
     }
 
-    public Date getEnd() {
+    public long getEnd() {
         return end;
     }
 
-    public void setEnd(Date end) {
+    public void setEnd(long end) {
         this.end = end;
     }
 }

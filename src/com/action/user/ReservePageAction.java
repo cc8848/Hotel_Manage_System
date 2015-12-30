@@ -28,10 +28,10 @@ public class ReservePageAction extends ActionSupport {
 
     @Override
     public String execute() throws Exception {
-        Map request = (Map) ActionContext.getContext().getSession();
+        Map session = (Map) ActionContext.getContext().getSession();
         Room room = roomService.findOne(room_id);
         if (room != null) {
-            request.put("room", room);
+            session.put("room", room);
             return SUCCESS;
         } else {
             return ERROR;

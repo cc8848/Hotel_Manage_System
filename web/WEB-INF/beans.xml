@@ -42,6 +42,7 @@
     <bean id="hotelDAO" class="com.dao.impl.HotelDaoImpl" parent="baseDAO"/>
     <bean id="adminDAO" class="com.dao.impl.AdminDAOImpl" parent="baseDAO"/>
     <bean id="roomDAO" class="com.dao.impl.RoomDAOImpl" parent="baseDAO"/>
+    <bean id="orderDAO" class="com.dao.impl.OrderDAOImpl" parent="baseDAO"/>
 
     <!-- 业务逻辑依赖注入 -->
     <bean id="userService" class="com.service.impl.UserServiceImpl">
@@ -56,6 +57,9 @@
     <bean id="roomService" class="com.service.impl.RoomServiceImpl">
         <property name="roomDAO" ref="roomDAO"/>
     </bean>
+    <bean id="orderService" class="com.service.impl.OrderServiceImpl">
+        <property name="orderDAO" ref="orderDAO"/>
+    </bean>
 
     <!-- Action依赖注入 -->
     <bean id="userRegAction" class="com.action.user.UserRegAction" scope="prototype">
@@ -69,6 +73,10 @@
     </bean>
     <bean id="reservePageAction" class="com.action.user.ReservePageAction" scope="prototype">
         <property name="roomService" ref="roomService"/>
+    </bean>
+    <bean id="reserveRoomAction" class="com.action.user.ReserveRoomAction" scope="prototype">
+        <property name="userService" ref="userService"/>
+        <property name="orderService" ref="orderService"/>
     </bean>
 
 

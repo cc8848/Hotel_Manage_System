@@ -27,6 +27,11 @@
             <result name="success">/userPage/reservePage.jsp</result>
             <result name="error">/#</result>
         </action>
+
+        <action name="reserveRoom" class="reserveRoomAction">
+            <result name="success">/userPage/reserveSuccessPage.jsp</result>
+            <result name="input">/userPage/reservePage.jsp</result>
+        </action>
     </package>
         <!--旅店相关-->
     <package name="strutsBeanHotel" extends="struts-default" namespace="/hotelPage">

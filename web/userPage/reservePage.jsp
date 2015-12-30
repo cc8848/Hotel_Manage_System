@@ -12,8 +12,10 @@
     <title>预定页面</title>
 </head>
 <body>
+<s:fielderror cssStyle="color:red"/>
 <s:set name="room" value="#session['room']"/>
-<form action="#">
+<s:set name="user" value="#session['user']"/>
+<form action="reserveRoom.action" method="post">
     <table border="1">
         <tr>
             <th colspan="2">房间详情</th>
@@ -51,9 +53,25 @@
             <td><s:property value="#room.pricePerNight"/></td>
         </tr>
         <tr>
-            <td><input type="datetime-local" name=""></td>
+            <td>入住时间</td>
+            <td><input type="date" name="start"></td>
         </tr>
-        <s:submit align="center"/>
+        <tr>
+            <td>退房时间</td>
+            <td><input type="date" name="end"></td>
+        </tr>
+        <tr>
+            <td>用户</td>
+            <td>
+                <s:if test="#user!=null">
+                    <s:property value="#user.phone"/>
+                </s:if>
+                <s:else>
+                    <input name="phone" type="text"/>
+                </s:else>
+            </td>
+        </tr>
+        <s:submit align="center" value="提交订单"/>
     </table>
 </form>
 </body>

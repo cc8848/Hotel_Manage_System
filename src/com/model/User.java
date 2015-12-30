@@ -11,7 +11,9 @@ public class User implements java.io.Serializable {
     private String IDCard;//身份证号
     private boolean register;//是否注册
 
-    public User() {}
+    public User() {
+        this.register = false;
+    }
 
     public void setPhone(String phone) {
         this.phone = phone;
