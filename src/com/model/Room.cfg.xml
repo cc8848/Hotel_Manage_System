@@ -8,7 +8,7 @@
             <generator class="uuid"/>
         </id>
 
-        <many-to-one name="hotel" column="hotel_id" class="com.model.Hotel" cascade="all"/>
+        <many-to-one name="hotel" column="hotel_id" class="com.model.Hotel" cascade="all" lazy="false"/>
 
         <property name="pricePerNight" type="java.lang.Double"/>
         <property name="type" type="java.lang.Integer"/>

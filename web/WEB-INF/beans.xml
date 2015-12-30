@@ -64,6 +64,9 @@
     <bean id="userLogAction" class="com.action.user.UserLogAction" scope="prototype">
         <property name="userService" ref="userService"/>
     </bean>
+    <bean id="roomsInfoAction" class="com.action.user.RoomsInfoAction" scope="prototype">
+        <property name="roomService" ref="roomService"/>
+    </bean>
 
 
     <bean id="managerLogAction" class="com.action.manage.ManagerLogAction" scope="prototype">

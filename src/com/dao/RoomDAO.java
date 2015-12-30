@@ -11,6 +11,7 @@ public interface RoomDAO {
     boolean save(Room room);
     boolean delete(String id);
     boolean update(Room room);
-    Room find(Room id);
-    List<Room> findAllRooms();
+    Room find(String id);
+    List findAll(int pageNow, int pageSize);
+    int findRoomsSize();
 }

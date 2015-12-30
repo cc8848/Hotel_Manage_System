@@ -60,7 +60,7 @@ public class RoomDAOImpl extends BaseDAO implements RoomDAO {
     }
 
     @Override
-    public Room find(Room id) {
+    public Room find(String id) {
         try {
             Session session = getSession();
             Transaction ts = session.beginTransaction();
@@ -78,7 +78,34 @@ public class RoomDAOImpl extends BaseDAO implements RoomDAO {
     }
 
     @Override
-    public List<Room> findAllRooms() {
+    public int findRoomsSize() {
+        try {
+            Session session = getSession();
+            Transaction ts = session.beginTransaction();
+            String hql = "from Room";
+            return session.createQuery(hql).list().size();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    @Override
+    public List findAll(int pageNow, int pageSize) {
+        try {
+            Session session = getSession();
+            Transaction ts = session.beginTransaction();
+            Query query = session.createQuery("from Room order by id");
+            int firstResult = (pageNow-1)*pageSize;
+            query.setFirstResult(firstResult);
+            query.setMaxResults(pageSize);
+            List list = query.list();
+            ts.commit();
+            session.close();
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return null;
     }
 }
