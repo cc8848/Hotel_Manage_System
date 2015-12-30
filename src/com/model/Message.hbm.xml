@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.model.Message" table="hotels" catalog="hoteldb">
+        <id name="id" type="java.lang.String" length="32">
+            <generator class="uuid"/>
+        </id>
+        <many-to-one name="hotel" class="com.model.Hotel" lazy="false" cascade="all"/>
+        <many-to-one name="user" class="com.model.User" cascade="all" lazy="false"/>
+
+        <property name="message" type="java.lang.String"/>
+        <property name="time" type="java.lang.Long"/>
+    </class>
+</hibernate-mapping>

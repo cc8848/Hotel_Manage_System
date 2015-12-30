@@ -22,11 +22,11 @@
 
         <property name="mappingResources">
             <list>
-                <value>com/model/User.cfg.xml</value>
-                <value>com/model/Hotel.cfg.xml</value>
-                <value>com/model/Admin.cfg.xml</value>
-                <value>com/model/Room.cfg.xml</value>
-                <value>com/model/Order.cfg.xml</value>
+                <value>com/model/User.hbm.xml</value>
+                <value>com/model/Hotel.hbm.xml</value>
+                <value>com/model/Admin.hbm.xml</value>
+                <value>com/model/Room.hbm.xml</value>
+                <value>com/model/Order.hbm.xml</value>
             </list>
         </property>
     </bean>

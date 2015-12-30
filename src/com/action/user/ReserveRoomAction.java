@@ -78,6 +78,8 @@ public class ReserveRoomAction extends ActionSupport {
                 userService.register(user);
                 System.out.println(user);
                 user = userService.findOne(phone);
+            } else {
+                addFieldError("start", "此手机号已经被注册请登录");
             }
         }
 
@@ -89,11 +91,11 @@ public class ReserveRoomAction extends ActionSupport {
                 return SUCCESS;
             }
             else {
-                addFieldError("order.start", "后台储存错误");
+                addFieldError("start", "后台储存错误");
                 return INPUT;
             }
         } else {
-            addFieldError("order.start", "此时间段此房间已经被预定");
+            addFieldError("start", "此时间段此房间已经被预定");
             return INPUT;
         }
     }

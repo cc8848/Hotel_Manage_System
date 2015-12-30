@@ -13,9 +13,9 @@
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property><!-- 驱动路径 -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property><!-- 数据库方言 -->
 
-        <mapping resource="com/model/User.cfg.xml" />
-        <mapping resource="com/model/Room.cfg.xml"/>
-        <mapping resource="com/model/Hotel.cfg.xml"/>
+        <mapping resource="com/model/User.hbm.xml" />
+        <mapping resource="com/model/Room.hbm.xml"/>
+        <mapping resource="com/model/Hotel.hbm.xml"/>
 
     </session-factory>
 </hibernate-configuration>
