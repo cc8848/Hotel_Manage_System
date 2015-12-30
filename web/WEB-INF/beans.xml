@@ -67,6 +67,9 @@
     <bean id="roomsInfoAction" class="com.action.user.RoomsInfoAction" scope="prototype">
         <property name="roomService" ref="roomService"/>
     </bean>
+    <bean id="reservePageAction" class="com.action.user.ReservePageAction" scope="prototype">
+        <property name="roomService" ref="roomService"/>
+    </bean>
 
 
     <bean id="managerLogAction" class="com.action.manage.ManagerLogAction" scope="prototype">

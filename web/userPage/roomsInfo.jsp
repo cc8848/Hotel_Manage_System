@@ -16,7 +16,9 @@
         <tr align="center" bgcolor="silver">
             <th>酒店名称</th>
             <th>房间种类</th>
+            <th>房间号</th>
             <th>价格</th>
+            <th>操作</th>
         </tr>
         <s:iterator value="#request.list" id="room">
             <tr>
@@ -26,8 +28,9 @@
                     <s:elseif test="#room.type==2">中</s:elseif>
                     <s:else>大</s:else>
                 </td>
+                <td><s:property value="#room.No"/> </td>
                 <td><s:property value="#room.pricePerNight"/> </td>
-                <td><a href="#">预定</a></td>
+                <td><a href="reservePage.action?room_id=<s:property value="#room.id"/> ">预定</a></td>
             </tr>
         </s:iterator>
         <s:set name="page" value="#request.page"/>

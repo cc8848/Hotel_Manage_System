@@ -12,8 +12,8 @@
             <td><input name="room.pricePerNight" type="text"/></td>
         </tr>
         <tr>
-            <td>房间数量:</td>
-            <td><input name="amount" type="text"/></td>
+            <td>房间号</td>
+            <td><input name="No" type="text"/></td>
         </tr>
         <tr>
             <td>房间大小:</td>

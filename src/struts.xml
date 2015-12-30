@@ -23,6 +23,10 @@
         <action name="roomsInfo" class="roomsInfoAction">
             <result name="success">/userPage/roomsInfo.jsp</result>
         </action>
+        <action name="reservePage" class="reservePageAction">
+            <result name="success">/userPage/reservePage.jsp</result>
+            <result name="error">/#</result>
+        </action>
     </package>
         <!--旅店相关-->
     <package name="strutsBeanHotel" extends="struts-default" namespace="/hotelPage">

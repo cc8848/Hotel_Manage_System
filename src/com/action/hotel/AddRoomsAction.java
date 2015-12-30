@@ -28,24 +28,22 @@ public class AddRoomsAction extends ActionSupport {
         this.room = room;
     }
 
-    public int amount;
+    public int No;
 
-    public int getAmount() {
-        return amount;
+    public int getNo() {
+        return No;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setNo(int no) {
+        No = no;
     }
 
     public String addRooms() {
         Map session = ActionContext.getContext().getSession();
         Hotel hotel = (Hotel)session.get("hotel");
         room.setHotel(hotel);
-
-        for (int i = 0; i < amount; i++) {
-            roomService.add(room);
-        }
+        room.setNo(String.valueOf(No));
+        roomService.add(room);
         return SUCCESS;
     }
 }

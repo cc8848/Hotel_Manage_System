@@ -9,9 +9,18 @@ public class Room {
     private Hotel hotel;
     private int type;//1,2,3分别代表小中大
     private boolean empty;
+    private String no;
 
     public Room() {
         empty = true;
+    }
+
+    public String getNo() {
+        return no;
+    }
+
+    public void setNo(String no) {
+        this.no = no;
     }
 
     public boolean isEmpty() {

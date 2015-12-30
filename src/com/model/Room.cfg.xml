@@ -10,6 +10,7 @@
 
         <many-to-one name="hotel" column="hotel_id" class="com.model.Hotel" cascade="all" lazy="false"/>
 
+        <property name="no" type="java.lang.String"/>
         <property name="pricePerNight" type="java.lang.Double"/>
         <property name="type" type="java.lang.Integer"/>
         <property name="empty" type="java.lang.Boolean"/>

@@ -34,4 +34,9 @@ public class RoomServiceImpl implements RoomService {
     public List findAll(int pageNow, int pageSize) {
         return roomDAO.findAll(pageNow, pageSize);
     }
+
+    @Override
+    public Room findOne(String id) {
+        return roomDAO.find(id);
+    }
 }

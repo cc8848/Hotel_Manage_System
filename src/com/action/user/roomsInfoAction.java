@@ -1,5 +1,6 @@
 package com.action.user;
 
+import com.model.Room;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.service.RoomService;

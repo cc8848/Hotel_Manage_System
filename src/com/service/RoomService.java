@@ -9,6 +9,7 @@ import java.util.List;
  */
 public interface RoomService {
     boolean add(Room room);
+    Room findOne(String id);
     int findRoomsSize();
     List findAll(int pageNow, int pageSize);
 }
