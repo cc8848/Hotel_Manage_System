@@ -81,9 +81,12 @@ public class RoomDAOImpl extends BaseDAO implements RoomDAO {
     public int findRoomsSize() {
         try {
             Session session = getSession();
-            Transaction ts = session.beginTransaction();
-            String hql = "from Room";
-            return session.createQuery(hql).list().size();
+            //Transaction ts = session.beginTransaction();
+
+            String hql = "from Room as r where r.empty=true";
+            Query query = session.createQuery(hql);
+
+            return query.list().size();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -95,7 +98,8 @@ public class RoomDAOImpl extends BaseDAO implements RoomDAO {
         try {
             Session session = getSession();
             Transaction ts = session.beginTransaction();
-            Query query = session.createQuery("from Room order by id");
+            boolean flag = true;
+            Query query = session.createQuery("from Room as r where r.empty=true order by id");
             int firstResult = (pageNow-1)*pageSize;
             query.setFirstResult(firstResult);
             query.setMaxResults(pageSize);

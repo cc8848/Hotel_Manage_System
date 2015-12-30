@@ -8,6 +8,19 @@ public class Room {
     private double pricePerNight;
     private Hotel hotel;
     private int type;//1,2,3分别代表小中大
+    private boolean empty;
+
+    public Room() {
+        empty = true;
+    }
+
+    public boolean isEmpty() {
+        return empty;
+    }
+
+    public void setEmpty(boolean empty) {
+        this.empty = empty;
+    }
 
     public int getType() {
         return type;

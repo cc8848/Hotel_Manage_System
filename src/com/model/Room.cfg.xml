@@ -12,5 +12,6 @@
 
         <property name="pricePerNight" type="java.lang.Double"/>
         <property name="type" type="java.lang.Integer"/>
+        <property name="empty" type="java.lang.Boolean"/>
     </class>
 </hibernate-mapping>

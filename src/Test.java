@@ -24,6 +24,8 @@ public class Test {
             roomDAO.setSessionFactory(sessionFactory);
 
             Room room = roomDAO.find("8a9fa01e51e8a0100151e8a172770001");
+            int a = roomDAO.findRoomsSize();
+            System.out.println(a);
             System.out.println("8a9fa01e51e8a0100151e8a1724f0000".length());
 
         } catch (Exception e) {
