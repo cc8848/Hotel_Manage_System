@@ -9,6 +9,8 @@
 <%@taglib uri="/struts-tags" prefix="s"%>
 <html>
     <head>
+        <jsp:include page="../headOut.jsp"/>
+        <jsp:include page="./headUser.jsp"/>
         <title>欢迎</title>
     </head>
     <body>
@@ -17,6 +19,5 @@
     手机: <s:property value="#user.phone"/> <br>
     昵称: <s:property value="#user.nickname"/> <br>
     姓名: <s:property value="#user.name"/> <br>
-    <h2><a href="roomsInfo.action">查询所有酒店房间</a> </h2>
     </body>
 </html>

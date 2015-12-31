@@ -6,6 +6,12 @@
 
 <struts>
     <constant name="struts.objectFactory" value="spring"/>
+
+    <package name="strutsPublic" extends="struts-default" namespace="/">
+        <action name="logout" class="com.action.LogoutAction">
+            <result name="success">/index.jsp</result>
+        </action>
+    </package>
     
     <package name="strutsBeanUser" extends="struts-default" namespace="/userPage">
         <!--用户相关-->

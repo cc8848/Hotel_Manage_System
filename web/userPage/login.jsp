@@ -9,21 +9,27 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <jsp:include page="../headOut.jsp"/>
     <title>登陆界面</title>
 </head>
 <body>
+<jsp:include page="./headUser.jsp"/>
 <s:fielderror cssStyle="color:red"/>
 <form action="userLog.action" method="post">
-    <table border="1">
-        <tr>
+    <table border="1" class="table table-hover">
+        <tr class="info">
             <td>手机号:</td>
             <td><input name="phone" type="text"/></td>
         </tr>
-        <tr>
+        <tr class="warning">
             <td>密码:</td>
             <td><input name="password" type="password"/></td>
         </tr>
-        <tr><s:submit align="center" value="登陆"/> </tr>
+        <tr class="text-center">
+            <td colspan="2">
+                <input type="submit" value="登录" class="btn btn-primary"/>
+            </td>
+        </tr>
     </table>
 </form>
 </body>

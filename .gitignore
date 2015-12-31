@@ -3,4 +3,4 @@
 *.iml
 .idea
 out
-web/test.jsp
+web/test.html

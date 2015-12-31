@@ -10,11 +10,13 @@
 <html>
 <head>
     <title>游客注册</title>
+    <jsp:include page="../headOut.jsp"/>
+    <jsp:include page="./headUser.jsp"/>
 </head>
 <body>
 <s:fielderror cssStyle="color:red"/>
 <form action="userReg.action" method="post">
-    <table border="1">
+    <table border="1" class="table table-hover">
         <tr>
             <td>手机号:</td>
             <td><input type="text" name="user.phone" /></td>
@@ -36,9 +38,15 @@
             <td>身份证号:</td>
             <td><input type="text" name="user.IDCard"/></td>
         </tr>
-        <tr>
-            <s:submit align="center" value="注册"/>
-            <s:reset align="center" value="重置"/>
+        <tr class="text-center">
+            <td colspan="2">
+                <input type="button" value="登录" class="btn btn-primary"/>
+            </td>
+        </tr>
+        <tr class="text-center">
+            <td colspan="2">
+                <input type="reset" value="重置" class="btn btn-warning"/>
+            </td>
         </tr>
     </table>
 </form>

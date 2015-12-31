@@ -8,13 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <jsp:include page="./headIn.jsp"/>
     <title>主页</title>
 </head>
-<body>
-<h1><a href="userPage/register.jsp">用户注册</a></h1>
-<h1><a href="userPage/login.jsp">用户登陆</a></h1>
-<h1><a href="hotelPage/register.jsp">旅店注册</a></h1>
-<h1><a href="hotelPage/login.jsp">旅店登陆</a></h1>
-<h1><a href="managerPage/manageLogin.jsp">管理员登陆</a></h1>
+<body style="background-image:url(back.JPG);background-position:center; background-repeat:repeat-y">
+<jsp:include page="./headIndex.jsp"/>
+
 </body>
 </html>

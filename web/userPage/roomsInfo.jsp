@@ -10,9 +10,11 @@
 <html>
 <head>
     <title>房间查询页面</title>
+    <jsp:include page="../headOut.jsp"/>
+    <jsp:include page="./headUser.jsp"/>
 </head>
 <body>
-    <table border="1" cellspacing="1" cellpadding="8" width="700">
+    <table border="1" cellspacing="1" cellpadding="8" width="700" class="table table-hover">
         <tr align="center" bgcolor="silver">
             <th>酒店名称</th>
             <th>房间种类</th>
@@ -30,7 +32,7 @@
                 </td>
                 <td><s:property value="#room.No"/> </td>
                 <td><s:property value="#room.pricePerNight"/> </td>
-                <td><a href="reservePage.action?room_id=<s:property value="#room.id"/> ">预定</a></td>
+                <td><a href="reservePage.action?room_id=<s:property value="#room.id"/> " class="btn-primary">预定</a></td>
             </tr>
         </s:iterator>
         <s:set name="page" value="#request.page"/>

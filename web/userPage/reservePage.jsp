@@ -10,15 +10,17 @@
 <html>
 <head>
     <title>预定页面</title>
+    <jsp:include page="../headOut.jsp"/>
+    <jsp:include page="./headUser.jsp"/>
 </head>
 <body>
 <s:fielderror cssStyle="color:red"/>
 <s:set name="room" value="#session['room']"/>
 <s:set name="user" value="#session['user']"/>
 <form action="reserveRoom.action" method="post">
-    <table border="1">
+    <table border="1" class="table table-hover">
         <tr>
-            <th colspan="2">房间详情</th>
+            <th colspan="2" class="text-center">房间详情</th>
         </tr>
         <tr>
             <td>酒店名称</td>
@@ -71,7 +73,11 @@
                 </s:else>
             </td>
         </tr>
-        <s:submit align="center" value="提交订单"/>
+        <tr class="text-center">
+            <td colspan="2">
+                <input type="button" value="提交订单" class="btn btn-primary"/>
+            </td>
+        </tr>
     </table>
 </form>
 </body>
