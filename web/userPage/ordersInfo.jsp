@@ -4,7 +4,7 @@
 <head>
     <title>用户订单信息</title>
     <jsp:include page="../headOut.jsp"/>
-    <jsp:include page="./headUser.jsp"/>
+    <jsp:include page="../head.jsp"/>
 </head>
 <body>
 <table border="1" cellspacing="1" cellpadding="8" width="700" class="table table-hover">

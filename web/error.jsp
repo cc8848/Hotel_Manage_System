@@ -4,7 +4,7 @@
 <head>
 
     <jsp:include page="./headOut.jsp"/>
-    <jsp:include page="./headIndex.jsp"/>
+    <jsp:include page="./head.jsp"/>
     <title>Error</title>
 </head>
 <body>

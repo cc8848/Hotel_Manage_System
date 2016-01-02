@@ -10,7 +10,7 @@
 <html>
     <head>
         <jsp:include page="../headOut.jsp"/>
-        <jsp:include page="./headUser.jsp"/>
+        <jsp:include page="../head.jsp"/>
         <title>欢迎</title>
     </head>
     <body>

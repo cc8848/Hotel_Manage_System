@@ -13,7 +13,7 @@
     <title>登陆界面</title>
 </head>
 <body>
-<jsp:include page="./headUser.jsp"/>
+<jsp:include page="../head.jsp"/>
 <s:fielderror cssStyle="color:red"/>
 <form action="userLog.action" method="post">
     <table border="1" class="table table-hover">

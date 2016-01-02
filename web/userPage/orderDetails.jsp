@@ -11,7 +11,7 @@
 <head>
     <title>订单详情</title>
     <jsp:include page="../headOut.jsp"/>
-    <jsp:include page="./headUser.jsp"/>
+    <jsp:include page="../head.jsp"/>
 </head>
 <s:set name="start" value="#session['start']"/>
 <s:set name="end" value="#session['end']"/>

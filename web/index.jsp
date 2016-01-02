@@ -12,7 +12,7 @@
     <title>主页</title>
 </head>
 <body style="background-image:url(back.JPG);background-position:center; background-repeat:repeat-y">
-<jsp:include page="./headIndex.jsp"/>
+<jsp:include page="./head.jsp"/>
 
 </body>
 </html>

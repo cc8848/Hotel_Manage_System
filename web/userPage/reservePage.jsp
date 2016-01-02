@@ -11,7 +11,7 @@
 <head>
     <title>预定页面</title>
     <jsp:include page="../headOut.jsp"/>
-    <jsp:include page="./headUser.jsp"/>
+    <jsp:include page="../head.jsp"/>
 </head>
 <body>
 <s:fielderror cssStyle="color:red"/>

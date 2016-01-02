@@ -10,11 +10,13 @@
 <html>
 <head>
     <title>旅店登陆</title>
+    <jsp:include page="../headOut.jsp"/>
+    <jsp:include page="../head.jsp"/>
 </head>
 <body>
 <s:fielderror cssStyle="color:red"/>
 <form action="hotelLog.action" method="post">
-    <table border="1">
+    <table border="1" class="table table-hover">
         <tr>
             <td>旅店名称:</td>
             <td><input name="name" type="text"/></td>
@@ -23,7 +25,11 @@
             <td>旅店密码:</td>
             <td><input name="password" type="password"/></td>
         </tr>
-        <tr><s:submit align="center" value="登陆"/> </tr>
+        <tr class="text-center">
+            <td colspan="2">
+                <input type="submit" value="登录" class="btn btn-primary"/>
+            </td>
+        </tr>
     </table>
 </form>
 </body>

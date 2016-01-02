@@ -3,11 +3,13 @@
 <html>
 <head>
     <title>旅店注册</title>
+    <jsp:include page="../headOut.jsp"/>
+    <jsp:include page="../head.jsp"/>
 </head>
 <body>
 <s:fielderror cssStyle="color:red"/>
 <form action="hotelReg.action" method="post">
-    <table border="1">
+    <table border="1" class="table table-hover">
         <tr>
             <td>旅店名称</td>
             <td><input type="text" name="hotel.hotelName" /></td>
@@ -37,9 +39,15 @@
             <td>电话:</td>
             <td><input type="text" name="hotel.telephone"/></td>
         </tr>
-        <tr>
-            <s:submit align="center" value="注册"/>
-            <s:reset align="center" value="重置"/>
+        <tr class="text-center">
+            <td colspan="2">
+                <input type="button" value="登录" class="btn btn-primary"/>
+            </td>
+        </tr>
+        <tr class="text-center">
+            <td colspan="2">
+                <input type="reset" value="重置" class="btn btn-warning"/>
+            </td>
         </tr>
     </table>
 </form>

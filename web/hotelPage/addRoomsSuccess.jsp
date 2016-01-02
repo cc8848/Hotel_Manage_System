@@ -9,6 +9,8 @@
 <html>
 <head>
     <title>房间添加成功</title>
+    <jsp:include page="../headOut.jsp"/>
+    <jsp:include page="../head.jsp"/>
 </head>
 <body>
     <h2>房间添加成功</h2> <br>
