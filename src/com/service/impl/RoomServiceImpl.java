@@ -45,4 +45,14 @@ public class RoomServiceImpl implements RoomService {
     public List findRoomsByHotel(Hotel hotel) {
         return roomDAO.findRoomsByHotel(hotel);
     }
+
+    @Override
+    public boolean remove(String id) {
+        return roomDAO.delete(id);
+    }
+
+    @Override
+    public boolean update(Room room) {
+        return roomDAO.update(room);
+    }
 }

@@ -49,13 +49,13 @@ public class RoomDAOImpl extends BaseDAO implements RoomDAO {
         try {
             Session session = getSession();
             Transaction ts = session.beginTransaction();
-            Query query = session.createQuery("delete from Room where id='" + id + "'");
+            Query query = session.createQuery("delete from Room as r where r.id='" + id + "'");
             query.executeUpdate();
             ts.commit();
             session.close();
             return true;
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
         return false;
     }

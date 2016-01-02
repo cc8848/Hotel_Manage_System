@@ -103,4 +103,13 @@
     <bean id="hotelRoomsInfoAction" class="com.action.hotel.HotelRoomsInfoAction" scope="prototype">
         <property name="roomService" ref="roomService"/>
     </bean>
+    <bean id="hotelRemoveRoomAction"  class="com.action.hotel.HotelRemoveRoomAction" scope="prototype">
+        <property name="roomService" ref="roomService"/>
+    </bean>
+    <bean id="hotelRoomDetailsAction" class="com.action.hotel.HotelRoomDetailsAction" scope="prototype">
+        <property name="roomService" ref="roomService"/>
+    </bean>
+    <bean id="hotelUpdateRoomAction" class="com.action.hotel.HotelUpdateRoomAction" scope="prototype">
+        <property name="roomService" ref="roomService"/>
+    </bean>
 </beans>

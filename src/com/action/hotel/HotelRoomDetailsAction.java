@@ -1,6 +1,5 @@
 package com.action.hotel;
-
-import com.model.Hotel;
+import com.model.Room;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.service.RoomService;
@@ -10,7 +9,7 @@ import java.util.Map;
 /**
  * Created by stiles on 16/1/2.
  */
-public class HotelRemoveRoomAction extends ActionSupport {
+public class HotelRoomDetailsAction extends ActionSupport {
     RoomService roomService;
 
     public void setRoomService(RoomService roomService) {
@@ -30,14 +29,8 @@ public class HotelRemoveRoomAction extends ActionSupport {
     @Override
     public String execute() throws Exception {
         Map session = ActionContext.getContext().getSession();
-        //Hotel hotel = (Hotel)session.get("hotel");
-        if (roomService.remove(room_id)) {
-            session.put("message", "成功删除房间信息");
-            return SUCCESS;
-        } else {
-            System.out.println("here");
-            addFieldError("error", "此房间关联了订单,无法删除");
-            return INPUT;
-        }
+        Room room = (Room)roomService.findOne(room_id);
+        session.put("room", room);
+        return SUCCESS;
     }
 }

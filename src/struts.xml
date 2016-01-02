@@ -31,7 +31,7 @@
         </action>
         <action name="reservePage" class="reservePageAction">
             <result name="success">/userPage/reservePage.jsp</result>
-            <result name="error">/#</result>
+            <result name="error">/error.jsp</result>
         </action>
 
         <action name="reserveRoom" class="reserveRoomAction">
@@ -68,6 +68,16 @@
         <action name="hotelRoomsInfo" class="hotelRoomsInfoAction">
             <result name="error">/error.jsp</result>
             <result name="success">/hotelPage/roomsInfo.jsp</result>
+        </action>
+        <action name="hotelRemoveRoom" class="hotelRemoveRoomAction">
+            <result name="success" type="redirect">/hotelPage/hotelRoomsInfo.action</result>
+            <result name="input">/hotelPage/roomsInfo.jsp</result>
+        </action>
+        <action name="hotelRoomDetail" class="hotelRoomDetailsAction">
+            <result name="success">/hotelPage/roomDetails.jsp</result>
+        </action>
+        <action name="hotelUpdateRoom" class="hotelUpdateRoomAction">
+            <result name="success">/hotelPage/messagePage.jsp</result>
         </action>
     </package>
 

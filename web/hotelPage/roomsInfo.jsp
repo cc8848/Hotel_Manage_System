@@ -13,6 +13,7 @@
     <jsp:include page="../headOut.jsp"/>
     <jsp:include page="../head.jsp"/>
 </head>
+<s:fielderror cssStyle="color:red"/>
 <body>
 <table border="1" cellspacing="1" cellpadding="8" width="700" class="table table-hover">
     <tr align="center" bgcolor="silver">
@@ -30,8 +31,8 @@
             </td>
             <td><s:property value="#room.pricePerNight"/> </td>
             <td>
-                <a href=""><button class="btn btn-primary">修改</button></a>
-                <a href=""><button class="btn btn-danger">删除</button></a>
+                <a href="hotelRoomDetail.action?room_id=<s:property value="#room.id"/>"><button class="btn btn-primary">修改</button></a>
+                <a href="hotelRemoveRoom.action?room_id=<s:property value="#room.id"/>"><button class="btn btn-danger">删除</button></a>
             </td>
         </tr>
     </s:iterator>

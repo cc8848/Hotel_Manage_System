@@ -7,8 +7,8 @@
         <id name="id" type="java.lang.String" length="32">
             <generator class="uuid"/>
         </id>
-        <many-to-one name="room" column="room_id" class="com.model.Room" cascade="all" lazy="false"/>
-        <many-to-one name="user" column="user_id" class="com.model.User" cascade="all" lazy="false"/>
+        <many-to-one name="room" column="room_id" class="com.model.Room" cascade="save-update" lazy="false"/>
+        <many-to-one name="user" column="user_id" class="com.model.User" cascade="save-update" lazy="false"/>
 
         <property name="start" type="java.lang.Long"/>
         <property name="end" type="java.lang.Long"/>

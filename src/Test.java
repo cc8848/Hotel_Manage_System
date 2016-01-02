@@ -29,6 +29,8 @@ public class Test {
             OrderDAOImpl orderDAO = new OrderDAOImpl();
             orderDAO.setSessionFactory(sessionFactory);
 
+            System.out.println(roomDAO.delete("8a9fa01e51e8a0100151e8a1724f0000"));
+
             Date date = new Date();
             System.out.println(date.toString());
 
