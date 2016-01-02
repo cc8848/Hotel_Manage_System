@@ -29,8 +29,8 @@
             <td><s:property value="#order.price"/> </td>
             <td><s:property value="#order.user.phone"/> </td>
             <td>
-                <a href=""><button class="btn btn-primary">接受</button></a>
-                <a href=""><button class="btn btn-danger">删除</button></a>
+                <a href="hotelOrderAccept.action?order_id=<s:property value="#order.id"/>"><button class="btn btn-primary">接受</button></a>
+                <a href="hotelOrderRemove.action?order_id=<s:property value="#order.id"/>"><button class="btn btn-danger">删除</button></a>
             </td>
         </tr>
     </s:iterator>

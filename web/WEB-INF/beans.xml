@@ -115,4 +115,7 @@
     <bean id="hotelOrdersInfoAction" class="com.action.hotel.HotelOrdersInfoAction" scope="prototype">
         <property name="orderService" ref="orderService"/>
     </bean>
+    <bean id="hotelOrderAction" class="com.action.hotel.HotelOrderAction" scope="prototype">
+        <property name="orderService" ref="orderService"/>
+    </bean>
 </beans>

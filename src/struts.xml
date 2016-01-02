@@ -83,6 +83,14 @@
             <result name="success">/hotelPage/ordersInfo.jsp</result>
             <result name="error">/hotelPage/messagePage.jsp</result>
         </action>
+        <action name="hotelOrderAccept" class="hotelOrderAction" method="accept">
+            <result name="success">/hotelPage/messagePage.jsp</result>
+            <result name="error">/hotelPage/messagePage.jsp</result>
+        </action>
+        <action name="hotelOrderRemove" class="hotelOrderAction" method="remove">
+            <result name="success">/hotelPage/messagePage.jsp</result>
+            <result name="error">/hotelPage/messagePage.jsp</result>
+        </action>
     </package>
 
         <!--管理员相关-->
