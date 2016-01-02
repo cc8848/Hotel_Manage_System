@@ -2,6 +2,8 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8" %>
 <%@ page contentType="text/html; charset=utf-8" %>
 <s:set name="headUser" value="#session['user']"/>
+<s:set name="headHotel" value="#session.hotel"/>
+<s:set name="headAdmin" value="#session.admin"/>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -41,6 +43,7 @@
                         <li><a href="/hotelmanager/hotelPage/login.jsp">登陆</a></li>
                         <li><a href="/hotelmanager/hotelPage/register.jsp">注册</a></li>
                         <li><a href="/hotelmanager/hotelPage/addRooms.jsp">添加房间</a> </li>
+                        <li><a href="/hotelmanager/hotelPage/hotelRoomsInfo.action">查询房间</a> </li>
                     </ul>
                 </li>
 
@@ -49,7 +52,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">管理员<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/hotelmanager/managerPage.jsp">登陆</a></li>
+                        <li><a href="/hotelmanager/managerPage/manageLogin.jsp">登陆</a></li>
                     </ul>
                 </li>
             </ul>
@@ -68,7 +71,34 @@
                         </ul>
                     </li>
                 </s:if>
-
+                <s:elseif test="#headHotel!=null">
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <s:property value="#headHotel.hotelName"/>
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人信息 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/hotelmanager/logout.action">注销</a></li>
+                        </ul>
+                    </li>
+                </s:elseif>
+                <s:elseif test="#headAdmin!=null">
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <s:property value="#headAdmin.username"/>
+                            <span class="caret"></span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人信息 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/hotelmanager/logout.action">注销</a></li>
+                        </ul>
+                    </li>
+                </s:elseif>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

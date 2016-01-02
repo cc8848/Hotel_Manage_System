@@ -27,9 +27,11 @@
                 </select>
             </td>
         </tr>
-        <tr><td colspan="2">
-            <input type="submit" value="登录" class="btn btn-primary"/>
-        </td></tr>
+        <tr class="text-center">
+            <td colspan="2">
+                <input type="submit" value="添加" class="btn btn-primary"/>
+            </td>
+        </tr>
     </table>
 </form>
 </body>

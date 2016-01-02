@@ -1,6 +1,7 @@
 package com.service.impl;
 
 import com.dao.RoomDAO;
+import com.model.Hotel;
 import com.model.Room;
 import com.service.RoomService;
 
@@ -38,5 +39,10 @@ public class RoomServiceImpl implements RoomService {
     @Override
     public Room findOne(String id) {
         return roomDAO.find(id);
+    }
+
+    @Override
+    public List findRoomsByHotel(Hotel hotel) {
+        return roomDAO.findRoomsByHotel(hotel);
     }
 }

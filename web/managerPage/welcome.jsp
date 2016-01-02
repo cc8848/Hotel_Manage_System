@@ -3,6 +3,8 @@
 <html>
 <head>
     <title>管理员主页</title>
+    <jsp:include page="../headOut.jsp"/>
+    <jsp:include page="../head.jsp"/>
 </head>
 <body>
     <h1>Welcome!</h1>

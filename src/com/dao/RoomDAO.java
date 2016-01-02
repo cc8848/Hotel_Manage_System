@@ -1,5 +1,6 @@
 package com.dao;
 
+import com.model.Hotel;
 import com.model.Room;
 
 import java.util.List;
@@ -14,4 +15,5 @@ public interface RoomDAO {
     Room find(String id);
     List findAll(int pageNow, int pageSize);
     int findRoomsSize();
+    List findRoomsByHotel(Hotel hotel);
 }

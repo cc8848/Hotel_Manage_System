@@ -65,6 +65,10 @@
         <action name="addRooms" class="addRoomsAction" method="addRooms">
             <result name="success">/hotelPage/addRoomsSuccess.jsp</result>
         </action>
+        <action name="hotelRoomsInfo" class="hotelRoomsInfoAction">
+            <result name="error">/error.jsp</result>
+            <result name="success">/hotelPage/roomsInfo.jsp</result>
+        </action>
     </package>
 
         <!--管理员相关-->

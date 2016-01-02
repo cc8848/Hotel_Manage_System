@@ -100,4 +100,7 @@
     <bean id="addRoomsAction" class="com.action.hotel.AddRoomsAction" scope="prototype">
         <property name="roomService" ref="roomService"/>
     </bean>
+    <bean id="hotelRoomsInfoAction" class="com.action.hotel.HotelRoomsInfoAction" scope="prototype">
+        <property name="roomService" ref="roomService"/>
+    </bean>
 </beans>

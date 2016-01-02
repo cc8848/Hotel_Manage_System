@@ -1,5 +1,6 @@
 package com.service;
 
+import com.model.Hotel;
 import com.model.Room;
 
 import java.util.List;
@@ -12,4 +13,5 @@ public interface RoomService {
     Room findOne(String id);
     int findRoomsSize();
     List findAll(int pageNow, int pageSize);
+    List findRoomsByHotel(Hotel hotel);
 }

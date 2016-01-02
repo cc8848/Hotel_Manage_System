@@ -2,6 +2,7 @@ package com.dao.impl;
 
 import com.dao.BaseDAO;
 import com.dao.RoomDAO;
+import com.model.Hotel;
 import com.model.Room;
 import java.util.List;
 import org.hibernate.Query;
@@ -98,11 +99,27 @@ public class RoomDAOImpl extends BaseDAO implements RoomDAO {
         try {
             Session session = getSession();
             Transaction ts = session.beginTransaction();
-            boolean flag = true;
             Query query = session.createQuery("from Room as r where r.empty=true order by id");
             int firstResult = (pageNow-1)*pageSize;
             query.setFirstResult(firstResult);
             query.setMaxResults(pageSize);
+            List list = query.list();
+            ts.commit();
+            session.close();
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public List findRoomsByHotel(Hotel hotel) {
+        try {
+            Session session = getSession();
+            Transaction ts = session.beginTransaction();
+            Query query = session.createQuery("from Room as r where r.hotel=? order by id");
+            query.setParameter(0, hotel);
             List list = query.list();
             ts.commit();
             session.close();
