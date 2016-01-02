@@ -14,11 +14,13 @@
     <jsp:include page="../head.jsp"/>
 </head>
 <body>
-<table border="1" cellspacing="1" cellpadding="8" width="700" class="table table-hover">
+<table border="1" width="700" class="table table-hover">
     <tr align="center" bgcolor="silver">
         <th>订单号</th>
         <th>房间</th>
         <th>价格</th>
+        <th>入住时间</th>
+        <th>退房时间</th>
         <th>预定客户电话</th>
         <th>操作</th>
     </tr>
@@ -27,6 +29,8 @@
             <td><s:property value="#order.id"/></td>
             <td><s:property value="#order.room.no"/> </td>
             <td><s:property value="#order.price"/> </td>
+            <td><s:property value="#order.startTime"/></td>
+            <td><s:property value="#order.endTime"/></td>
             <td><s:property value="#order.user.phone"/> </td>
             <td>
                 <a href="hotelOrderAccept.action?order_id=<s:property value="#order.id"/>"><button class="btn btn-primary">接受</button></a>
