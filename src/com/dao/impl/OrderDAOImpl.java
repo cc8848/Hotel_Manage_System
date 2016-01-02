@@ -2,6 +2,7 @@ package com.dao.impl;
 
 import com.dao.BaseDAO;
 import com.dao.OrderDAO;
+import com.model.Hotel;
 import com.model.Order;
 import com.model.User;
 import org.hibernate.Query;
@@ -26,8 +27,8 @@ public class OrderDAOImpl extends BaseDAO implements OrderDAO {
             return true;
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     @Override
@@ -41,8 +42,8 @@ public class OrderDAOImpl extends BaseDAO implements OrderDAO {
             return true;
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     @Override
@@ -56,8 +57,8 @@ public class OrderDAOImpl extends BaseDAO implements OrderDAO {
             return true;
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     @Override
@@ -74,8 +75,8 @@ public class OrderDAOImpl extends BaseDAO implements OrderDAO {
             return order;
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
-        return null;
     }
 
     @Override
@@ -97,8 +98,8 @@ public class OrderDAOImpl extends BaseDAO implements OrderDAO {
             return tOrder != null;
         } catch (Exception e) {
             e.printStackTrace();
+            return true;
         }
-        return true;
     }
 
     @Override
@@ -119,8 +120,9 @@ public class OrderDAOImpl extends BaseDAO implements OrderDAO {
             return list;
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
-        return null;
+
     }
 
     @Override
@@ -134,7 +136,44 @@ public class OrderDAOImpl extends BaseDAO implements OrderDAO {
             return query.list().size();
         } catch (Exception e) {
             e.printStackTrace();
+            return 0;
         }
-        return 0;
+    }
+
+    @Override
+    public int findSizeByHotel(Hotel hotel) {
+        try {
+            Session session = getSession();
+            //Transaction ts = session.beginTransaction();
+            String hql = "from Order as o where o.room.hotel=? and o.ifValid=true";
+            Query query = session.createQuery(hql);
+            query.setParameter(0, hotel);
+            return query.list().size();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
+    @Override
+    public List findByHotel(Hotel hotel, int pageNow, int pageSize) {
+        try {
+            Session session = getSession();
+            Transaction ts = session.beginTransaction();
+            String hql = "from Order as o where o.room.hotel=? and o.ifValid=true order by o.id";
+            Query query = session.createQuery(hql);
+            query.setParameter(0, hotel);
+            int firstResult = (pageNow-1)*pageSize;
+            query.setFirstResult(firstResult);
+            query.setMaxResults(pageSize);
+            List list = query.list();
+            ts.commit();
+            session.clear();
+            session.close();
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

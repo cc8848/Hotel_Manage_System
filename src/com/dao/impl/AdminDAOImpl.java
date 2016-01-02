@@ -25,7 +25,7 @@ public class AdminDAOImpl extends BaseDAO implements AdminDAO {
             return admin;
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
-        return null;
     }
 }

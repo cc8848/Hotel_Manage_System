@@ -22,8 +22,8 @@ public class HotelDaoImpl extends BaseDAO implements HotelDAO {
             return true;
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     @Override
@@ -37,8 +37,8 @@ public class HotelDaoImpl extends BaseDAO implements HotelDAO {
             return true;
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     @Override
@@ -53,8 +53,8 @@ public class HotelDaoImpl extends BaseDAO implements HotelDAO {
             return true;
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     @Override
@@ -71,8 +71,8 @@ public class HotelDaoImpl extends BaseDAO implements HotelDAO {
             return hotel;
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
-        return null;
     }
 
     @Override
@@ -89,7 +89,7 @@ public class HotelDaoImpl extends BaseDAO implements HotelDAO {
             return hotel;
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
-        return null;
     }
 }

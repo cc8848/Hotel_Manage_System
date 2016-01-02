@@ -43,7 +43,8 @@
                         <li><a href="/hotelmanager/hotelPage/login.jsp">登陆</a></li>
                         <li><a href="/hotelmanager/hotelPage/register.jsp">注册</a></li>
                         <li><a href="/hotelmanager/hotelPage/addRooms.jsp">添加房间</a> </li>
-                        <li><a href="/hotelmanager/hotelPage/hotelRoomsInfo.action">查询房间</a> </li>
+                        <li><a href="/hotelmanager/hotelPage/hotelRoomsInfo.action">查看房间</a> </li>
+                        <li><a href="/hotelmanager/hotelPage/hotelOrdersInfo.action">查看预定信息</a> </li>
                     </ul>
                 </li>
 

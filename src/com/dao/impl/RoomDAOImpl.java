@@ -25,8 +25,8 @@ public class RoomDAOImpl extends BaseDAO implements RoomDAO {
             return true;
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     @Override
@@ -40,14 +40,14 @@ public class RoomDAOImpl extends BaseDAO implements RoomDAO {
             return true;
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     @Override
     public boolean delete(String id) {
+        Session session = getSession();
         try {
-            Session session = getSession();
             Transaction ts = session.beginTransaction();
             Query query = session.createQuery("delete from Room as r where r.id='" + id + "'");
             query.executeUpdate();
@@ -56,8 +56,10 @@ public class RoomDAOImpl extends BaseDAO implements RoomDAO {
             return true;
         } catch (Exception e) {
             //e.printStackTrace();
+            session.clear();
+            session.close();
+            return false;
         }
-        return false;
     }
 
     @Override
@@ -74,8 +76,8 @@ public class RoomDAOImpl extends BaseDAO implements RoomDAO {
             return room;
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
-        return null;
     }
 
     @Override
@@ -90,8 +92,8 @@ public class RoomDAOImpl extends BaseDAO implements RoomDAO {
             return query.list().size();
         } catch (Exception e) {
             e.printStackTrace();
+            return 0;
         }
-        return 0;
     }
 
     @Override
@@ -109,8 +111,8 @@ public class RoomDAOImpl extends BaseDAO implements RoomDAO {
             return list;
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
-        return null;
     }
 
     @Override
@@ -126,7 +128,7 @@ public class RoomDAOImpl extends BaseDAO implements RoomDAO {
             return list;
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
-        return null;
     }
 }

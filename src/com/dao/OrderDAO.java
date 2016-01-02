@@ -1,5 +1,6 @@
 package com.dao;
 
+import com.model.Hotel;
 import com.model.Order;
 import com.model.User;
 
@@ -16,4 +17,6 @@ public interface OrderDAO {
     boolean ifConflict(Order order);
     List findByUser(User user, int pageNow, int pageSize);
     int findSizeByUser(User user);
+    List findByHotel(Hotel hotel,int pageNow, int pageSize);
+    int findSizeByHotel(Hotel hotel);
 }

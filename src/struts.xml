@@ -79,6 +79,10 @@
         <action name="hotelUpdateRoom" class="hotelUpdateRoomAction">
             <result name="success">/hotelPage/messagePage.jsp</result>
         </action>
+        <action name="hotelOrdersInfo" class="hotelOrdersInfoAction">
+            <result name="success">/hotelPage/ordersInfo.jsp</result>
+            <result name="error">/hotelPage/messagePage.jsp</result>
+        </action>
     </package>
 
         <!--管理员相关-->

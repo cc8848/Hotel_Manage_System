@@ -1,6 +1,7 @@
 package com.service.impl;
 
 import com.dao.OrderDAO;
+import com.model.Hotel;
 import com.model.Order;
 import com.model.User;
 import com.service.OrderService;
@@ -54,5 +55,15 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public int findSizeByUser(User user) {
         return orderDAO.findSizeByUser(user);
+    }
+
+    @Override
+    public List findByHotel(Hotel hotel, int pageNow, int pageSize) {
+        return orderDAO.findByHotel(hotel, pageNow, pageSize);
+    }
+
+    @Override
+    public int findSizeByHotel(Hotel hotel) {
+        return orderDAO.findSizeByHotel(hotel);
     }
 }

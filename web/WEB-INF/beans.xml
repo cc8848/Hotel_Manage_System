@@ -112,4 +112,7 @@
     <bean id="hotelUpdateRoomAction" class="com.action.hotel.HotelUpdateRoomAction" scope="prototype">
         <property name="roomService" ref="roomService"/>
     </bean>
+    <bean id="hotelOrdersInfoAction" class="com.action.hotel.HotelOrdersInfoAction" scope="prototype">
+        <property name="orderService" ref="orderService"/>
+    </bean>
 </beans>

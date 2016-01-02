@@ -23,8 +23,8 @@ public class UserDAOImpl extends BaseDAO implements UserDAO {
             return true;
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     @Override
@@ -38,8 +38,8 @@ public class UserDAOImpl extends BaseDAO implements UserDAO {
             return true;
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     @Override
@@ -53,8 +53,8 @@ public class UserDAOImpl extends BaseDAO implements UserDAO {
             return true;
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
-        return false;
     }
 
     @Override
@@ -71,7 +71,7 @@ public class UserDAOImpl extends BaseDAO implements UserDAO {
             return  user;
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
-        return null;
     }
 }
