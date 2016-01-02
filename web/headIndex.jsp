@@ -20,7 +20,7 @@
                 <li class="active">
                     <a href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
-                <li><a href="index.jsp">主页</a></li>
+                <li><a href="/hotelmanager/index.jsp">主页</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">用户<span class="caret"></span></a>
@@ -28,6 +28,7 @@
                         <li><a href="userPage/login.jsp">登陆</a></li>
                         <li><a href="userPage/register.jsp">注册</a></li>
                         <li><a href="userPage/roomsInfo.action">查询房间</a></li>
+                        <li><a href="/hotelmanager/userPage/ordersInfo.action">查询订单</a></li>
                     </ul>
                 </li>
 

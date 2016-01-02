@@ -12,6 +12,7 @@
 
         <property name="start" type="java.lang.Long"/>
         <property name="end" type="java.lang.Long"/>
+        <property name="price" type="java.lang.Double"/>
         <property name="ifValid" type="java.lang.Boolean"/>
     </class>
 </hibernate-mapping>

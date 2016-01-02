@@ -38,6 +38,16 @@
             <result name="success">/userPage/reserveSuccessPage.jsp</result>
             <result name="input">/userPage/reservePage.jsp</result>
         </action>
+
+        <action name="ordersInfo" class="ordersInfoAction">
+            <result name="success">/userPage/ordersInfo.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+        <action name="orderDetails" class="orderDetailsAction">
+            <result name="success">/userPage/orderDetails.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
     </package>
         <!--旅店相关-->
     <package name="strutsBeanHotel" extends="struts-default" namespace="/hotelPage">

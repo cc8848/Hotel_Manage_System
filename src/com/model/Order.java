@@ -9,6 +9,7 @@ public class Order {
     private String id;
     private Room room;
     private User user;
+    private double price;
 
     long start;
     long end;
@@ -19,7 +20,7 @@ public class Order {
         this.ifValid = true;
     }
 
-    public boolean isIfValid() {
+    public boolean getIfValid() {
         return ifValid;
     }
 
@@ -65,5 +66,13 @@ public class Order {
 
     public void setEnd(long end) {
         this.end = end;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

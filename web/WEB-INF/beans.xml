@@ -78,6 +78,12 @@
         <property name="userService" ref="userService"/>
         <property name="orderService" ref="orderService"/>
     </bean>
+    <bean id="ordersInfoAction" class="com.action.user.OrdersInfoAction" scope="prototype">
+        <property name="orderService" ref="orderService"/>
+    </bean>
+    <bean id="orderDetailsAction" class="com.action.user.OrderDetailsAction" scope="prototype">
+        <property name="orderService" ref="orderService"/>
+    </bean>
 
 
     <bean id="managerLogAction" class="com.action.manage.ManagerLogAction" scope="prototype">

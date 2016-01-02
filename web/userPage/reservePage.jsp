@@ -75,7 +75,7 @@
         </tr>
         <tr class="text-center">
             <td colspan="2">
-                <input type="button" value="提交订单" class="btn btn-primary"/>
+                <button type="submit" value="提交订单" class="btn btn-primary">提交订单</button>
             </td>
         </tr>
     </table>

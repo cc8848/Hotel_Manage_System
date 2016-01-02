@@ -2,7 +2,10 @@ package com.service.impl;
 
 import com.dao.OrderDAO;
 import com.model.Order;
+import com.model.User;
 import com.service.OrderService;
+
+import java.util.List;
 
 /**
  * Created by stiles on 15/12/30.
@@ -41,5 +44,15 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public boolean ifConflict(Order order) {
         return orderDAO.ifConflict(order);
+    }
+
+    @Override
+    public List findByUser(User user, int pageNow, int pageSize) {
+        return orderDAO.findByUser(user, pageNow, pageSize);
+    }
+
+    @Override
+    public int findSizeByUser(User user) {
+        return orderDAO.findSizeByUser(user);
     }
 }

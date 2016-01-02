@@ -3,9 +3,12 @@ package com.dao.impl;
 import com.dao.BaseDAO;
 import com.dao.OrderDAO;
 import com.model.Order;
+import com.model.User;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
+import java.util.List;
 
 /**
  * Created by stiles on 15/12/30.
@@ -96,5 +99,42 @@ public class OrderDAOImpl extends BaseDAO implements OrderDAO {
             e.printStackTrace();
         }
         return true;
+    }
+
+    @Override
+    public List findByUser(User user, int pageNow, int pageSize) {
+        try {
+            Session session = getSession();
+            Transaction ts = session.beginTransaction();
+            String hql = "from Order as o where o.user=? order by o.id";
+            Query query = session.createQuery(hql);
+            query.setParameter(0, user);
+            int firstResult = (pageNow-1)*pageSize;
+            query.setFirstResult(firstResult);
+            query.setMaxResults(pageSize);
+            List list = query.list();
+            ts.commit();
+            session.clear();
+            session.close();
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public int findSizeByUser(User user) {
+        try {
+            Session session = getSession();
+            //Transaction ts = session.beginTransaction();
+            String hql = "from Order as o where o.user=?";
+            Query query = session.createQuery(hql);
+            query.setParameter(0, user);
+            return query.list().size();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 }

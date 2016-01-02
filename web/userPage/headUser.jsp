@@ -30,6 +30,7 @@
                         <li><a href="/hotelmanager/userPage/login.jsp">登陆</a></li>
                         <li><a href="/hotelmanager/userPage/register.jsp">注册</a></li>
                         <li><a href="/hotelmanager/userPage/roomsInfo.action">查询房间</a></li>
+                        <li><a href="/hotelmanager/userPage/ordersInfo.action">查询订单</a></li>
                     </ul>
                 </li>
 

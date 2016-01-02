@@ -80,9 +80,10 @@ public class ReserveRoomAction extends ActionSupport {
                 user = userService.findOne(phone);
             } else {
                 addFieldError("start", "此手机号已经被注册请登录");
+                return INPUT;
             }
         }
-
+        order.setPrice(room.getPricePerNight());
         order.setUser(user);
         order.setRoom(room);
         if (!orderService.ifConflict(order)) {

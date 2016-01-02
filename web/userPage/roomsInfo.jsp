@@ -32,7 +32,7 @@
                 </td>
                 <td><s:property value="#room.No"/> </td>
                 <td><s:property value="#room.pricePerNight"/> </td>
-                <td><a href="reservePage.action?room_id=<s:property value="#room.id"/> " class="btn-primary">预定</a></td>
+                <td><a href="reservePage.action?room_id=<s:property value="#room.id"/> "><input type="button" value="预定" class="btn btn-primary"/></a> </td>
             </tr>
         </s:iterator>
         <s:set name="page" value="#request.page"/>
