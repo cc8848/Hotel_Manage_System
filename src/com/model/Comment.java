@@ -11,6 +11,15 @@ public class Comment {
     private Hotel hotel;
     private Date time;
     private String message;
+    private String timeString;
+
+    public String getTimeString() {
+        return timeString;
+    }
+
+    public void setTimeString(String timeString) {
+        this.timeString = timeString;
+    }
 
     public String getId() {
         return id;

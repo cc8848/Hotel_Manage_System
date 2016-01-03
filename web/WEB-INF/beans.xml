@@ -95,6 +95,9 @@
     <bean id="commentAction" class="com.action.user.CommentAction" scope="prototype">
         <property name="commentService" ref="commentService"/>
     </bean>
+    <bean id="viewCommentsAction" class="com.action.user.ViewCommentsAction" scope="prototype">
+        <property name="commentService" ref="commentService"/>
+    </bean>
 
 
     <bean id="managerLogAction" class="com.action.manage.ManagerLogAction" scope="prototype">

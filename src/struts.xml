@@ -52,8 +52,13 @@
             <result name="success">/userPage/commentPage.jsp</result>
         </action>
         <action name="comment" class="commentAction">
-            <result name="success">/#</result>
+            <result name="success" type="redirect">/userPage/viewComments.action</result>
             <result name="input">/userPage/commentPage.jsp</result>
+        </action>
+
+        <action name="viewComments" class="viewCommentsAction">
+            <result name="success">/userPage/viewComments.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
     </package>
 
@@ -99,6 +104,7 @@
             <result name="success">/hotelPage/messagePage.jsp</result>
             <result name="error">/hotelPage/messagePage.jsp</result>
         </action>
+
     </package>
 
         <!--管理员相关-->
