@@ -18,7 +18,7 @@
         <mapping resource="com/model/Room.hbm.xml"/>
         <mapping resource="com/model/Hotel.hbm.xml"/>
         <mapping resource="com/model/Order.hbm.xml"/>
-        <mapping resource="com/model/Message.hbm.xml"/>
+        <mapping resource="com/model/Comment.hbm.xml"/>
 
 
     </session-factory>

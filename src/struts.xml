@@ -48,7 +48,15 @@
             <result name="success">/userPage/orderDetails.jsp</result>
             <result name="error">/error.jsp</result>
         </action>
+        <action name="userCommentPage" class="userCommentPageAction">
+            <result name="success">/userPage/commentPage.jsp</result>
+        </action>
+        <action name="comment" class="commentAction">
+            <result name="success">/#</result>
+            <result name="input">/userPage/commentPage.jsp</result>
+        </action>
     </package>
+
         <!--旅店相关-->
     <package name="strutsBeanHotel" extends="struts-default" namespace="/hotelPage">
         <action name="hotelReg" class="hotelRegAction" method="register">

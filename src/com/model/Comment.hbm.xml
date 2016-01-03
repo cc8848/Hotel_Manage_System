@@ -3,7 +3,7 @@
         "-//Hibernate/Hibernate Mapping DTD//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="com.model.Message" table="hotels" catalog="hoteldb">
+    <class name="com.model.Comment" table="comments" catalog="hoteldb">
         <id name="id" type="java.lang.String" length="32">
             <generator class="uuid"/>
         </id>
@@ -11,6 +11,6 @@
         <many-to-one name="user" class="com.model.User" cascade="all" lazy="false"/>
 
         <property name="message" type="java.lang.String"/>
-        <property name="time" type="java.lang.Long"/>
+        <property name="time" type="java.util.Date"/>
     </class>
 </hibernate-mapping>

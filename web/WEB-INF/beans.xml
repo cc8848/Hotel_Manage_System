@@ -27,6 +27,7 @@
                 <value>com/model/Admin.hbm.xml</value>
                 <value>com/model/Room.hbm.xml</value>
                 <value>com/model/Order.hbm.xml</value>
+                <value>com/model/Comment.hbm.xml</value>
             </list>
         </property>
     </bean>
@@ -43,6 +44,7 @@
     <bean id="adminDAO" class="com.dao.impl.AdminDAOImpl" parent="baseDAO"/>
     <bean id="roomDAO" class="com.dao.impl.RoomDAOImpl" parent="baseDAO"/>
     <bean id="orderDAO" class="com.dao.impl.OrderDAOImpl" parent="baseDAO"/>
+    <bean id="commentDAO" class="com.dao.impl.CommentDAOImpl" parent="baseDAO"/>
 
     <!-- 业务逻辑依赖注入 -->
     <bean id="userService" class="com.service.impl.UserServiceImpl">
@@ -59,6 +61,9 @@
     </bean>
     <bean id="orderService" class="com.service.impl.OrderServiceImpl">
         <property name="orderDAO" ref="orderDAO"/>
+    </bean>
+    <bean id="commentService" class="com.service.impl.CommentServiceImpl">
+        <property name="commentDAO" ref="commentDAO"/>
     </bean>
 
     <!-- Action依赖注入 -->
@@ -83,6 +88,12 @@
     </bean>
     <bean id="orderDetailsAction" class="com.action.user.OrderDetailsAction" scope="prototype">
         <property name="orderService" ref="orderService"/>
+    </bean>
+    <bean id="userCommentPageAction" class="com.action.user.UserCommentPageAction" scope="prototype">
+        <property name="hotelService" ref="hotelService"/>
+    </bean>
+    <bean id="commentAction" class="com.action.user.CommentAction" scope="prototype">
+        <property name="commentService" ref="commentService"/>
     </bean>
 
 

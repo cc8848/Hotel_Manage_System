@@ -21,6 +21,7 @@
             <td><s:property value="#order.price"/> </td>
             <td>
                 <a href="orderDetails.action?order_id=<s:property value="#order.id"/>"><button class="btn btn-primary">查看详情</button></a>
+                <a href="userCommentPage.action?hotel_id=<s:property value="#order.room.hotel.id"/>"><button class="btn btn-default">评 价</button></a>
             </td>
         </tr>
     </s:iterator>

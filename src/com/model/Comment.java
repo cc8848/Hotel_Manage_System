@@ -1,13 +1,15 @@
 package com.model;
 
+import java.util.Date;
+
 /**
  * Created by stiles on 15/12/30.
  */
-public class Message {
+public class Comment {
     private String id;
     private User user;
     private Hotel hotel;
-    private long time;
+    private Date time;
     private String message;
 
     public String getId() {
@@ -34,11 +36,11 @@ public class Message {
         this.hotel = hotel;
     }
 
-    public long getTime() {
+    public Date getTime() {
         return time;
     }
 
-    public void setTime(long time) {
+    public void setTime(Date time) {
         this.time = time;
     }
 
