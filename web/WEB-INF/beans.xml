@@ -132,4 +132,7 @@
     <bean id="hotelOrderAction" class="com.action.hotel.HotelOrderAction" scope="prototype">
         <property name="orderService" ref="orderService"/>
     </bean>
+    <bean id="hotelViewComments" class="com.action.hotel.HotelViewCommentsAction" scope="prototype">
+        <property name="commentService" ref="commentService"/>
+    </bean>
 </beans>

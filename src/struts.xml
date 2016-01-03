@@ -104,7 +104,10 @@
             <result name="success">/hotelPage/messagePage.jsp</result>
             <result name="error">/hotelPage/messagePage.jsp</result>
         </action>
-
+        <action name="hotelViewComments" class="hotelViewComments">
+            <result name="success">/hotelPage/hotelViewComments.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
     </package>
 
         <!--管理员相关-->

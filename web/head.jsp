@@ -46,6 +46,7 @@
                         <li><a href="/hotelmanager/hotelPage/addRooms.jsp">添加房间</a> </li>
                         <li><a href="/hotelmanager/hotelPage/hotelRoomsInfo.action">查看房间</a> </li>
                         <li><a href="/hotelmanager/hotelPage/hotelOrdersInfo.action">查看预定信息</a> </li>
+                        <li><a href="/hotelmanager/hotelPage/hotelViewComments.action">查看用户评论</a> </li>
                     </ul>
                 </li>
 
