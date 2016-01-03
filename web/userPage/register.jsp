@@ -40,12 +40,12 @@
         </tr>
         <tr class="text-center">
             <td colspan="2">
-                <input type="button" value="登录" class="btn btn-primary"/>
+                <button class="btn btn-primary">注册</button>
             </td>
         </tr>
         <tr class="text-center">
             <td colspan="2">
-                <input type="reset" value="重置" class="btn btn-warning"/>
+                <button type="reset" class="btn btn-warning">重置</button>
             </td>
         </tr>
     </table>

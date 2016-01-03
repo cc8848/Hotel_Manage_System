@@ -56,6 +56,7 @@
                        aria-expanded="false">管理员<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/hotelmanager/managerPage/manageLogin.jsp">登陆</a></li>
+                        <li><a href="/hotelmanager/managerPage/manageCommentsPage.action">管理所有评论</a></li>
                     </ul>
                 </li>
             </ul>

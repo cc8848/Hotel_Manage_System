@@ -63,11 +63,6 @@ public class CommentDAOImpl extends BaseDAO implements CommentDAO {
     }
 
     @Override
-    public List findAll() {
-        return null;
-    }
-
-    @Override
     public List findByHotel(Hotel hotel) {
         try {
             Session session = getSession();
@@ -80,6 +75,42 @@ public class CommentDAOImpl extends BaseDAO implements CommentDAO {
         } catch (Exception e) {
             e.printStackTrace();
             return null;
+        }
+    }
+
+    @Override
+    public List findAll(int pageNow, int pageSize) {
+        Session session = getSession();
+        try {
+            Transaction ts = session.beginTransaction();
+            Query query = session.createQuery("from Comment order by id desc ");
+            int firstResult = (pageNow-1)*pageSize;
+            query.setFirstResult(firstResult);
+            query.setMaxResults(pageSize);
+            List list = query.list();
+            ts.commit();
+            session.close();
+            return list;
+        } catch (Exception e) {
+            session.close();
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public int findSize() {
+        try {
+            Session session = getSession();
+            //Transaction ts = session.beginTransaction();
+
+            String hql = "from Comment";
+            Query query = session.createQuery(hql);
+
+            return query.list().size();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
         }
     }
 }

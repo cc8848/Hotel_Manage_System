@@ -116,6 +116,14 @@
             <result name="success">/managerPage/welcome.jsp</result>
             <result name="input">/managerPage/manageLogin.jsp</result>
         </action>
+        <action name="manageCommentsPage" class="manageCommentsPageAction">
+            <result name="success">/managerPage/manageCommentsPage.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        <action name="deleteComment" class="deleteCommentAction">
+            <result name="success" type="redirect">/managerPage/manageCommentsPage.action</result>
+            <result name="input">/managerPage/manageCommentsPage.jsp</result>
+        </action>
 
     </package>
 </struts>

@@ -14,5 +14,6 @@ public interface CommentDAO {
     boolean delete(String id);
     List findByUser(User user);
     List findByHotel(Hotel hotel);
-    List findAll();
+    List findAll(int pageNow, int pageSize);
+    int findSize();
 }

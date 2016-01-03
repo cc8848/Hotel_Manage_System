@@ -103,6 +103,12 @@
     <bean id="managerLogAction" class="com.action.manage.ManagerLogAction" scope="prototype">
         <property name="adminService" ref="adminService"/>
     </bean>
+    <bean id="manageCommentsPageAction" class="com.action.manage.ManageCommentsPageAction" scope="prototype">
+        <property name="commentService" ref="commentService"/>
+    </bean>
+    <bean id="deleteCommentAction" class="com.action.manage.DeleteCommentAction" scope="prototype">
+        <property name="commentService" ref="commentService"/>
+    </bean>
 
 
     <bean id="hotelRegAction" class="com.action.hotel.HotelRegisterAction" scope="prototype">

@@ -14,4 +14,6 @@ public interface CommentService {
     boolean remove(String id);
     List findByUser(User user);
     List findByHotel(Hotel hotel);
+    List findAll(int pageNow, int pageSize);
+    int findSize();
 }

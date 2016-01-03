@@ -37,4 +37,14 @@ public class CommentServiceImpl implements CommentService {
     public List findByHotel(Hotel hotel) {
         return commentDAO.findByHotel(hotel);
     }
+
+    @Override
+    public int findSize() {
+        return commentDAO.findSize();
+    }
+
+    @Override
+    public List findAll(int pageNow, int pageSize) {
+        return commentDAO.findAll(pageNow, pageSize);
+    }
 }
