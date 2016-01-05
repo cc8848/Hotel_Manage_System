@@ -15,8 +15,8 @@
 </head>
 <body>
 <form action="roomsInfoCity.action" method="post">
-    <input type="text" name="city"/>
-    <s:submit cssClass="btn btn-primary"/>
+    城市搜索:<input type="text" name="city"/><s:submit cssClass="btn btn-primary" value="搜索"/>
+
 </form>
     <table border="1" cellspacing="1" cellpadding="8" width="700" class="table table-hover">
         <tr align="center" bgcolor="silver">
