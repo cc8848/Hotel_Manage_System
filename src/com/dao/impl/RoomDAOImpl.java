@@ -131,4 +131,24 @@ public class RoomDAOImpl extends BaseDAO implements RoomDAO {
             return null;
         }
     }
+
+    @Override
+    public List findRoomsByCity(String city, int pageNow, int pageSize) {
+        try {
+            Session session = getSession();
+            Transaction ts = session.beginTransaction();
+            Query query = session.createQuery("from Room as r where r.hotel.city=? order by id");
+            query.setParameter(0, city);
+            int firstResult = (pageNow-1)*pageSize;
+            query.setFirstResult(firstResult);
+            query.setMaxResults(pageSize);
+            List list = query.list();
+            ts.commit();
+            session.close();
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

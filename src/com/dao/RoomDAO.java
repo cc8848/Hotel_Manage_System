@@ -16,4 +16,5 @@ public interface RoomDAO {
     List findAll(int pageNow, int pageSize);
     int findRoomsSize();
     List findRoomsByHotel(Hotel hotel);
+    List findRoomsByCity(String city, int pageNow, int pageSize);
 }

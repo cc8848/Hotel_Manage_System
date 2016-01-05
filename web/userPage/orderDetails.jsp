@@ -28,6 +28,10 @@
             <td><s:property value="#order.room.hotel.hotelName"/> </td>
         </tr>
         <tr>
+            <td>旅店城市</td>
+            <td><s:property value="#order.room.hotel.city"/></td>
+        </tr>
+        <tr>
             <td>旅店地址</td>
             <td><s:property value="#order.room.hotel.address"/></td>
         </tr>

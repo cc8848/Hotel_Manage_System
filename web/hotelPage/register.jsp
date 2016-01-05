@@ -32,6 +32,10 @@
             </td>
         </tr>
         <tr>
+            <td>城市:</td>
+            <td><input type="text" name="hotel.city"/></td>
+        </tr>
+        <tr>
             <td>地址:</td>
             <td><input type="text" name="hotel.address"/></td>
         </tr>

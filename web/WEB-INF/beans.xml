@@ -98,6 +98,9 @@
     <bean id="viewCommentsAction" class="com.action.user.ViewCommentsAction" scope="prototype">
         <property name="commentService" ref="commentService"/>
     </bean>
+    <bean id="roomsInfoCityAction" class="com.action.user.RoomsInfoCityAction" scope="prototype">
+        <property name="roomService" ref="roomService"/>
+    </bean>
 
 
     <bean id="managerLogAction" class="com.action.manage.ManagerLogAction" scope="prototype">

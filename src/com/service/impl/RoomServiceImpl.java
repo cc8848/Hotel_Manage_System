@@ -55,4 +55,9 @@ public class RoomServiceImpl implements RoomService {
     public boolean update(Room room) {
         return roomDAO.update(room);
     }
+
+    @Override
+    public List findRoomsByCity(String city, int pageNow, int pageSize) {
+        return roomDAO.findRoomsByCity(city, pageNow, pageSize);
+    }
 }

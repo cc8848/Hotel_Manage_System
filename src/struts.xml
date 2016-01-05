@@ -60,6 +60,10 @@
             <result name="success">/userPage/viewComments.jsp</result>
             <result name="error">/error.jsp</result>
         </action>
+
+        <action name="roomsInfoCity" class="roomsInfoCityAction">
+            <result name="success">/userPage/roomsInfo.jsp</result>
+        </action>
     </package>
 
         <!--旅店相关-->

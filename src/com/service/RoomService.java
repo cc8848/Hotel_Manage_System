@@ -16,4 +16,5 @@ public interface RoomService {
     List findRoomsByHotel(Hotel hotel);
     boolean remove(String id);
     boolean update(Room room);
+    List findRoomsByCity(String city, int pageNow, int pageSize);
 }

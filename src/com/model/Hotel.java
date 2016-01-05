@@ -13,6 +13,15 @@ public class Hotel implements java.io.Serializable {
     private int star;
     private String address;
     private String telephone;
+    private String city;
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 
     public String getPassword() {
         return password;

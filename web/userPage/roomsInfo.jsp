@@ -14,6 +14,10 @@
     <jsp:include page="../head.jsp"/>
 </head>
 <body>
+<form action="roomsInfoCity.action" method="post">
+    <input type="text" name="city"/>
+    <s:submit cssClass="btn btn-primary"/>
+</form>
     <table border="1" cellspacing="1" cellpadding="8" width="700" class="table table-hover">
         <tr align="center" bgcolor="silver">
             <th>酒店名称</th>

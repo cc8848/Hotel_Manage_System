@@ -12,5 +12,6 @@
         <property name="star" type="java.lang.Integer"/>
         <property name="telephone" type="java.lang.String" length="20" not-null="true"/>
         <property name="password" type="java.lang.String" length="30"/>
+        <property name="city" type="java.lang.String" length="30"/>
     </class>
 </hibernate-mapping>
