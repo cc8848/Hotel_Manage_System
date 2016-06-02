@@ -1,6 +1,5 @@
 *.class
 *.jar
 *.iml
-.idea
 out
 web/test.html
